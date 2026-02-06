@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D97FC30F-7D4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{280A8A34-4FED-4ADE-ACDE-8A052F516543}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetManagement.Domain", "src\Bookify.Domain\AssetManagement.Domain.csproj", "{9320FB7A-4C41-4564-BA73-03066EDD41CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetManagement.Domain", "src\AssetManagement.Domain\AssetManagement.Domain.csproj", "{9320FB7A-4C41-4564-BA73-03066EDD41CE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetManagement.Application", "src\Bookify.Application\AssetManagement.Application.csproj", "{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetManagement.Application", "src\AssetManagement.Application\AssetManagement.Application.csproj", "{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetManagement.Infrastructure", "src\Bookify.Infrastructure\AssetManagement.Infrastructure.csproj", "{A2F42B52-0328-4968-8EB0-B3CBCA02A808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetManagement.Infrastructure", "src\AssetManagement.Infrastructure\AssetManagement.Infrastructure.csproj", "{A2F42B52-0328-4968-8EB0-B3CBCA02A808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement.Api", "src\Bookify.Api\AssetManagement.Api.csproj", "{668B54A6-2BEC-42D5-B60F-709C24731C8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetManagement.Api", "src\AssetManagement.Api\AssetManagement.Api.csproj", "{668B54A6-2BEC-42D5-B60F-709C24731C8C}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ADD5AF21-A432-4B22-BA2A-479AE85F98FC}"
 EndProject
