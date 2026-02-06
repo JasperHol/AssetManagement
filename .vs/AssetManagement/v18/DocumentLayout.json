@@ -1,0 +1,509 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Users\\jho\\Documents\\AssetManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\manufacturers\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\manufacturers\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\manufacturers\\requestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\manufacturers\\requestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\amenities\\amenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\amenities\\amenity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.api\\extensions\\seeddataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|solutionrelative:src\\bookify.api\\extensions\\seeddataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.api\\controllers\\users\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|solutionrelative:src\\bookify.api\\controllers\\users\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.api\\controllers\\amenities\\amenitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|solutionrelative:src\\bookify.api\\controllers\\amenities\\amenitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.api\\controllers\\amenities\\createamenityrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|solutionrelative:src\\bookify.api\\controllers\\amenities\\createamenityrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\bookify.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.infrastructure\\configurations\\amenityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\bookify.infrastructure\\configurations\\amenityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\manufacturers\\imanufacturerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\manufacturers\\imanufacturerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.infrastructure\\repositories\\manufacturerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\bookify.infrastructure\\repositories\\manufacturerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\Bookify.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\Bookify.Application\\AssetManagement.Application.csproj|solutionrelative:src\\bookify.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\Bookify.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.application\\users\\searchusers\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\Bookify.Application\\AssetManagement.Application.csproj|solutionrelative:src\\bookify.application\\users\\searchusers\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\Bookify.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.application\\users\\createuser\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\Bookify.Application\\AssetManagement.Application.csproj|solutionrelative:src\\bookify.application\\users\\createuser\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\assetmanagement.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\assetmanagement.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\manufacturers\\name.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\manufacturers\\name.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\amenities\\name.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\amenities\\name.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\amenities\\iamenityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\amenities\\iamenityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\abstractions\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\abstractions\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\amenities\\events\\amenitydomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\amenities\\events\\amenitydomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\amenities\\number.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\amenities\\number.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\amenities\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\amenities\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.infrastructure\\repositories\\amenityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\bookify.infrastructure\\repositories\\amenityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\Bookify.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\bookify.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\users\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\users\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\manufacturers\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\manufacturers\\description.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\manufacturers\\events\\manufacturerdomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\manufacturers\\events\\manufacturerdomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.domain\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\Bookify.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\bookify.domain\\abstractions\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\bookify.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\Bookify.Api\\AssetManagement.Api.csproj|solutionrelative:src\\bookify.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 267,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SeedDataExtensions.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Extensions\\SeedDataExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Api\\Extensions\\SeedDataExtensions.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Extensions\\SeedDataExtensions.cs",
+              "RelativeToolTip": "src\\Bookify.Api\\Extensions\\SeedDataExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:25:45.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Controllers\\Users\\UsersController.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Api\\Controllers\\Users\\UsersController.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Controllers\\Users\\UsersController.cs",
+              "RelativeToolTip": "src\\Bookify.Api\\Controllers\\Users\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:25:37.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateAmenityRequest.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Controllers\\Amenities\\CreateAmenityRequest.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Api\\Controllers\\Amenities\\CreateAmenityRequest.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Controllers\\Amenities\\CreateAmenityRequest.cs",
+              "RelativeToolTip": "src\\Bookify.Api\\Controllers\\Amenities\\CreateAmenityRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:23:24.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AmenitiesController.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Controllers\\Amenities\\AmenitiesController.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Api\\Controllers\\Amenities\\AmenitiesController.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\Controllers\\Amenities\\AmenitiesController.cs",
+              "RelativeToolTip": "src\\Bookify.Api\\Controllers\\Amenities\\AmenitiesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:22:56.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Amenity.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Amenity.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Amenities\\Amenity.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Amenity.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Amenities\\Amenity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:47:29.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Manufacturers\\Manufacturer.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Manufacturer.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Manufacturers\\Manufacturer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:45:41.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Requestable.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Requestable.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Manufacturers\\Requestable.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Requestable.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Manufacturers\\Requestable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T11:24:11.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\Bookify.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:21:32.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AmenityConfiguration.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Configurations\\AmenityConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Infrastructure\\Configurations\\AmenityConfiguration.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Configurations\\AmenityConfiguration.cs",
+              "RelativeToolTip": "src\\Bookify.Infrastructure\\Configurations\\AmenityConfiguration.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:19:18.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserResponse.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Application\\Users\\SearchUsers\\UserResponse.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Application\\Users\\SearchUsers\\UserResponse.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Application\\Users\\SearchUsers\\UserResponse.cs",
+              "RelativeToolTip": "src\\Bookify.Application\\Users\\SearchUsers\\UserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:13:44.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Application\\DependencyInjection.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\Bookify.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAlwBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:13:25.857Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreateUserCommandHandler.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "RelativeToolTip": "src\\Bookify.Application\\Users\\CreateUser\\CreateUserCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:13:11.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IManufacturerRepository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\IManufacturerRepository.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Manufacturers\\IManufacturerRepository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\IManufacturerRepository.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Manufacturers\\IManufacturerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T09:52:29.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ManufacturerRepository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Repositories\\ManufacturerRepository.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Infrastructure\\Repositories\\ManufacturerRepository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Repositories\\ManufacturerRepository.cs",
+              "RelativeToolTip": "src\\Bookify.Infrastructure\\Repositories\\ManufacturerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:56:46.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Name.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Name.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Manufacturers\\Name.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Name.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Manufacturers\\Name.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:07:30.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AssetManagement.Domain.csproj",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\AssetManagement.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\AssetManagement.Domain.csproj",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\AssetManagement.Domain.csproj",
+              "RelativeToolTip": "src\\Bookify.Domain\\AssetManagement.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-06T11:22:12.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IAmenityRepository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\IAmenityRepository.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Amenities\\IAmenityRepository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\IAmenityRepository.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Amenities\\IAmenityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:48:28.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Abstractions\\Entity.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Abstractions\\Entity.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Abstractions\\Entity.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Abstractions\\Entity.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T13:02:10.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AmenityDomainEvent.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Events\\AmenityDomainEvent.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Amenities\\Events\\AmenityDomainEvent.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Events\\AmenityDomainEvent.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Amenities\\Events\\AmenityDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:48:12.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Name.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Name.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Amenities\\Name.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Name.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Amenities\\Name.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:48:42.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Number.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Number.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Amenities\\Number.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Number.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Amenities\\Number.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:48:45.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Description.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Description.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Amenities\\Description.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Amenities\\Description.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Amenities\\Description.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:48:22.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AmenityRepository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Repositories\\AmenityRepository.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Infrastructure\\Repositories\\AmenityRepository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Repositories\\AmenityRepository.cs",
+              "RelativeToolTip": "src\\Bookify.Infrastructure\\Repositories\\AmenityRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:51:05.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Infrastructure\\Repositories\\Repository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeToolTip": "src\\Bookify.Infrastructure\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T11:38:49.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Users\\User.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Users\\User.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Users\\User.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Users\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T12:41:38.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Description.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Description.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Manufacturers\\Description.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Description.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Manufacturers\\Description.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T11:15:54.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ManufacturerDomainEvent.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Events\\ManufacturerDomainEvent.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Manufacturers\\Events\\ManufacturerDomainEvent.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Manufacturers\\Events\\ManufacturerDomainEvent.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Manufacturers\\Events\\ManufacturerDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T10:07:27.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Error.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Abstractions\\Error.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Abstractions\\Error.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Abstractions\\Error.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Abstractions\\Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T10:46:37.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Result.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Abstractions\\Result.cs",
+              "RelativeDocumentMoniker": "src\\Bookify.Domain\\Abstractions\\Result.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Domain\\Abstractions\\Result.cs",
+              "RelativeToolTip": "src\\Bookify.Domain\\Abstractions\\Result.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T10:44:55.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Bookify.Api\\appsettings.json",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\Bookify.Api\\appsettings.json",
+              "RelativeToolTip": "src\\Bookify.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-06T09:36:11.36Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

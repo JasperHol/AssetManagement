@@ -1,0 +1,63 @@
+name: dockercompose9142465508595634645
+services:
+  AssetManagement-db:
+    container_name: AssetManagement.Db
+    environment:
+      POSTGRES_DB: AssetManagement
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: F:\Users\jho\Documents\AssetManagement\.containers\database
+        target: /var/lib/postgresql/18/data
+        bind:
+          create_host_path: true
+  AssetManagement.api:
+    build:
+      context: F:\Users\jho\Documents\AssetManagement
+      dockerfile: src/AssetManagement.Api/Dockerfile
+    container_name: AssetManagement.Api
+    depends_on:
+      AssetManagement-db:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "5000"
+      ASPNETCORE_HTTPS_PORTS: "5001"
+    image: AssetManagementapi
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5000
+        published: "5000"
+        protocol: tcp
+      - mode: ingress
+        target: 5001
+        published: "5001"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\jho\AppData\Roaming/Microsoft/UserSecrets
+        target: /root/.microsoft/usersecrets
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: C:\Users\jho\AppData\Roaming/ASP.NET/Https
+        target: /root/.aspnet/https
+        read_only: true
+        bind:
+          create_host_path: true
+networks:
+  default:
+    name: dockercompose9142465508595634645_default
