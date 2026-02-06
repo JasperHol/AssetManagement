@@ -5,7 +5,7 @@ using AssetManagement.Domain.Users;
 using AssetManagement.Domain.Users.Events;
 
 namespace AssetManagement.Domain.Amenities;
-
+//deze even laten staan als voorbeeld. moet nog verwijderd worden.
 public sealed class Amenity : Entity
 {
     private Amenity(
