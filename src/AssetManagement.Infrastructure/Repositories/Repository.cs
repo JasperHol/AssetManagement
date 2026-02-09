@@ -14,7 +14,7 @@ internal abstract class Repository<T>
     }
 
     public async Task<T?> GetByIdAsync(
-        Guid id,
+        int id,
         CancellationToken cancellationToken = default)
     {
         return await DbContext

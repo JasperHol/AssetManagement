@@ -1,14 +1,14 @@
 ﻿
 
 
-namespace AssetManagement.Domain.Users;
+//namespace AssetManagement.Domain.Users;
 
 
 
-public interface IUserRepository
-{
-    Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+//public interface IUserRepository
+//{
+//    Task<User?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 
-    void Add(User user);
+//    void Add(User user);
 
-}
+//}

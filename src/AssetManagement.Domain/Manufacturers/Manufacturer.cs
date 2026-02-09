@@ -1,27 +1,19 @@
 ﻿using AssetManagement.Domain.Abstractions;
-using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Manufacturers.Events;
 using AssetManagement.Domain.Shared;
-using AssetManagement.Domain.Users;
-using AssetManagement.Domain.Users.Events;
-using System.Xml.Linq;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AssetManagement.Domain.Manufacturers;
 
 public sealed class Manufacturer : Entity
 {
     private Manufacturer(
-        Guid id,
         Name name,
         Description description,
-        Number number)
-        : base(id)
+        Requestable requestable)
     {
-
         Name = name;
         Description = description;
-        Number = number;
+        Requestable = requestable;
     }
 
     private Manufacturer()
@@ -29,19 +21,26 @@ public sealed class Manufacturer : Entity
     }
 
     public Name Name { get; private set; }
-
     public Description Description { get; private set; }
+    public Requestable Requestable { get; private set; }
 
-    public Number Number { get; private set; }
-
-
-    public static Manufacturer Create(Name name, Description description, Number number)
+    public static Manufacturer Create(
+        Name name,
+        Description description,
+        Requestable? requestable = null)
     {
-        var manufacturer = new Manufacturer(Guid.NewGuid(), name, description, number);
+        var manufacturer = new Manufacturer(
+            name,
+            description,
+            requestable ?? Requestable.True);
 
-        manufacturer.RaiseDomainEvent(new ManufacturerCreatedDomainEvent(manufacturer.Id));
+        manufacturer.RaiseDomainEvent(
+            new ManufacturerCreatedDomainEvent(
+                manufacturer.Name,
+                manufacturer.Description,
+                manufacturer.Requestable));
 
         return manufacturer;
     }
-
 }
+

@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "Bookify.Api.Controllers.Amenities.AmenitiesController",
-    "Method": "SearchAmenities",
-    "RelativePath": "api/Amenities/all_amenities",
+    "ContainingType": "AssetManagement.Api.Controllers.Manufacturers.ManufacturersController",
+    "Method": "SearchManufacturers",
+    "RelativePath": "api/Manufacturers/all_manufacturers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,230 +10,23 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Bookify.Api.Controllers.Amenities.AmenitiesController",
-    "Method": "CreateAmenity",
-    "RelativePath": "api/Amenities/amenity_create",
+    "ContainingType": "AssetManagement.Api.Controllers.Manufacturers.ManufacturersController",
+    "Method": "CreateManufacturer",
+    "RelativePath": "api/Manufacturers/manufacturer_create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Bookify.Api.Controllers.Amenities.CreateAmenityRequest",
+        "Type": "AssetManagement.Api.Controllers.Manufacturers.CreateManufacturerRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Bookify.Api.Controllers.ApartmentAmenities.ApartmentAmenitiesController",
-    "Method": "CreateApartmentAmenity",
-    "RelativePath": "api/ApartmentAmenities/apartmentamenity_create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.ApartmentAmenities.Create\u00C1partmentAmenityRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.ApartmentAmenities.ApartmentAmenitiesController",
-    "Method": "SearchApartmentAmenities",
-    "RelativePath": "api/ApartmentAmenities/SearchApartmentAmenities",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "apartmentId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Apartments.ApartmentsController",
-    "Method": "SearchApartments",
-    "RelativePath": "api/apartments",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "startDate",
-        "Type": "System.DateOnly",
-        "IsRequired": false
-      },
-      {
-        "Name": "endDate",
-        "Type": "System.DateOnly",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Bookings.BookingsController",
-    "Method": "GetBooking",
-    "RelativePath": "api/bookings/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Bookings.BookingsController",
-    "Method": "CancelBooking",
-    "RelativePath": "api/bookings/cancel",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.Bookings.CancelBookingRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Bookings.BookingsController",
-    "Method": "CompleteBooking",
-    "RelativePath": "api/bookings/complete",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.Bookings.CompleteBookingRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Bookings.BookingsController",
-    "Method": "ConfirmBooking",
-    "RelativePath": "api/bookings/confirm",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.Bookings.ConfirmBookingRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Bookings.BookingsController",
-    "Method": "RejectBooking",
-    "RelativePath": "api/bookings/reject",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.Bookings.RejectBookingRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Bookings.BookingsController",
-    "Method": "ReserveBooking",
-    "RelativePath": "api/bookings/reserve",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.Bookings.ReserveBookingRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.InventoryItems.InventoryItemsController",
-    "Method": "SearchInventoryItems",
-    "RelativePath": "api/InventoryItems/all_inventory_items",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.InventoryItems.InventoryItemsController",
-    "Method": "CreateInventoryItem",
-    "RelativePath": "api/InventoryItems/inventoryItem_create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.InventoryItems.CreateInventoryItemRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Reviews.ReviewsController",
-    "Method": "SearchReviews",
-    "RelativePath": "api/Reviews/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Reviews.ReviewsController",
-    "Method": "CreateReview",
-    "RelativePath": "api/Reviews/review_create",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Bookify.Api.Controllers.Reviews.CreateReviewRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Bookify.Api.Controllers.Users.UsersController",
+    "ContainingType": "AssetManagement.Api.Controllers.Users.UsersController",
     "Method": "SearchUsers",
     "RelativePath": "api/Users/Search_Users",
     "HttpMethod": "GET",
@@ -254,7 +47,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Bookify.Api.Controllers.Users.UsersController",
+    "ContainingType": "AssetManagement.Api.Controllers.Users.UsersController",
     "Method": "CreateUser",
     "RelativePath": "api/Users/user_create",
     "HttpMethod": "POST",
@@ -263,7 +56,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Bookify.Api.Controllers.Users.CreateUserRequest",
+        "Type": "AssetManagement.Api.Controllers.Users.CreateUserRequest",
         "IsRequired": true
       }
     ],
