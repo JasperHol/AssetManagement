@@ -2,6 +2,7 @@
 
 using AssetManagement.Application.Manufacturers.CreateManufacturer;
 using AssetManagement.Application.Manufacturers.SearchManufacturer;
+using AssetManagement.Application.Manufacturers.UpdateManufacturer;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -49,6 +50,26 @@ namespace AssetManagement.Api.Controllers.Manufacturers
             }
 
             return CreatedAtAction(nameof(CreateManufacturer), new { id = result.Value }, result.Value);
+        }
+
+        [HttpPost("manufacturer_update")]
+        public async Task<IActionResult> UpdateManufacturer(
+            UpdateManufacturerRequest request,
+            CancellationToken cancellationToken)
+        {
+            var command = new UpdateManufacturerCommand(
+                request.Id,
+                request.Requestable
+                );
+
+            var result = await _sender.Send(command, cancellationToken);
+
+            if (result.IsFailure)
+            {
+                return BadRequest(result.Error);
+            }
+
+            return CreatedAtAction(nameof(UpdateManufacturer), new { id = result.Value }, result.Value);
         }
 
     }

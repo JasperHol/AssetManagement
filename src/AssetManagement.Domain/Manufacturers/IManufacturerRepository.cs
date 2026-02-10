@@ -8,4 +8,6 @@ public interface IManufacturerRepository
 
     void Add(Manufacturer manufacturer);
 
+    Manufacturer Update(Manufacturer manufacturer);
+
 }

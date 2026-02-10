@@ -48,28 +48,41 @@
         }
       }
     },
-    "/api/Users/Search_Users": {
-      "get": {
+    "/api/Manufacturers/manufacturer_update": {
+      "post": {
         "tags": [
-          "Users"
+          "Manufacturers"
         ],
-        "parameters": [
-          {
-            "name": "first_Name",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "last_Name",
-            "in": "query",
-            "style": "form",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateManufacturerRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateManufacturerRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateManufacturerRequest"
+              }
             }
           }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Models/all_models": {
+      "get": {
+        "tags": [
+          "Models"
         ],
         "responses": {
           "200": {
@@ -78,26 +91,57 @@
         }
       }
     },
-    "/api/Users/user_create": {
+    "/api/Models/model_create": {
       "post": {
         "tags": [
-          "Users"
+          "Models"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserRequest"
+                "$ref": "#/components/schemas/CreateModelRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserRequest"
+                "$ref": "#/components/schemas/CreateModelRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateUserRequest"
+                "$ref": "#/components/schemas/CreateModelRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Models/model_update": {
+      "post": {
+        "tags": [
+          "Models"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateModelRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateModelRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateModelRequest"
               }
             }
           }
@@ -126,24 +170,46 @@
         },
         "additionalProperties": false
       },
-      "CreateUserRequest": {
+      "CreateModelRequest": {
         "type": "object",
         "properties": {
-          "firstName": {
+          "name": {
             "type": "string",
             "nullable": true
           },
-          "lastName": {
+          "description": {
             "type": "string",
             "nullable": true
           },
-          "email": {
-            "type": "string",
-            "nullable": true
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateManufacturerRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
           },
-          "dateOfBirth": {
-            "type": "string",
-            "format": "date"
+          "requestable": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateModelRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestable": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

@@ -1,8 +1,10 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Manufacturers.Events;
+//using AssetManagement.Domain.Models;
 using AssetManagement.Domain.Shared;
 
 namespace AssetManagement.Domain.Manufacturers;
+
 
 public sealed class Manufacturer : Entity
 {
@@ -19,7 +21,7 @@ public sealed class Manufacturer : Entity
     private Manufacturer()
     {
     }
-
+    public AssetManagement.Domain.Models.ManufacturerId Id { get; private set; }
     public Name Name { get; private set; }
     public Description Description { get; private set; }
     public Requestable Requestable { get; private set; }
@@ -42,5 +44,14 @@ public sealed class Manufacturer : Entity
 
         return manufacturer;
     }
+    public void ToggleRequestable()
+    {
+        Requestable = Requestable.Toggle();
+
+        RaiseDomainEvent(
+            new ManufacturerUpdatedDomainEvent(Id,Requestable));
+    }
+
+
 }
 

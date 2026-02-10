@@ -26,37 +26,58 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AssetManagement.Api.Controllers.Users.UsersController",
-    "Method": "SearchUsers",
-    "RelativePath": "api/Users/Search_Users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "first_Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "last_Name",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AssetManagement.Api.Controllers.Users.UsersController",
-    "Method": "CreateUser",
-    "RelativePath": "api/Users/user_create",
+    "ContainingType": "AssetManagement.Api.Controllers.Manufacturers.ManufacturersController",
+    "Method": "UpdateManufacturer",
+    "RelativePath": "api/Manufacturers/manufacturer_update",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "AssetManagement.Api.Controllers.Users.CreateUserRequest",
+        "Type": "AssetManagement.Api.Controllers.Manufacturers.UpdateManufacturerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AssetManagement.Api.Controllers.Models.ModelsController",
+    "Method": "SearchModels",
+    "RelativePath": "api/Models/all_models",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AssetManagement.Api.Controllers.Models.ModelsController",
+    "Method": "CreateModel",
+    "RelativePath": "api/Models/model_create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AssetManagement.Api.Controllers.Models.CreateModelRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AssetManagement.Api.Controllers.Models.ModelsController",
+    "Method": "UpdateModel",
+    "RelativePath": "api/Models/model_update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "AssetManagement.Api.Controllers.Models.UpdateModelRequest",
         "IsRequired": true
       }
     ],
