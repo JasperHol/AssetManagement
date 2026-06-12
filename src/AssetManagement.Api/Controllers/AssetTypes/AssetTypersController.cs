@@ -1,35 +1,35 @@
 ﻿
 
-using AssetManagement.Application.Manufacturers.CreateManufacturer;
-using AssetManagement.Application.Manufacturers.SearchManufacturer;
-using AssetManagement.Application.Manufacturers.UpdateManufacturer;
+using AssetManagement.Application.AssetTypes.CreateAssetType;
+using AssetManagement.Application.AssetTypes.SearchAssetType;
+using AssetManagement.Application.AssetTypes.UpdateAssetType;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace AssetManagement.Api.Controllers.Manufacturers
+namespace AssetManagement.Api.Controllers.AssetTypes
 {
-    [Route("api/Manufacturers")]
+    [Route("api/AssetTypes")]
     [ApiController]
-    public class ManufacturersController : ControllerBase
+    public class AssetTypesController : ControllerBase
     {
         private readonly ISender _sender;
 
-        public ManufacturersController(ISender sender)
+        public AssetTypesController(ISender sender)
         {
             _sender = sender;
         }
         /// <summary>
-        /// Get All Manufacturers.
+        /// Get All AssetTypes.
         /// </summary>
         /// <remarks>
         /// Lijst van alle Manufcturers ophalen.
         /// </remarks>
-        [HttpGet("all_manufacturers")]
-        public async Task<IActionResult> SearchManufacturers(CancellationToken cancellationToken)
+        [HttpGet("all_AssetTypes")]
+        public async Task<IActionResult> SearchAssetTypes(CancellationToken cancellationToken)
         {
-            var query = new SearchManufacturersQuery();
+            var query = new SearchAssetTypesQuery();
 
             var result = await _sender.Send(query, cancellationToken);
 
@@ -38,17 +38,17 @@ namespace AssetManagement.Api.Controllers.Manufacturers
         }
 
         /// <summary>
-        /// Create New Manufacturer.
+        /// Create New AssetType.
         /// </summary>
         /// <remarks>
-        /// Nieuwe Manufacturer toevoegen.
+        /// Nieuwe AssetType toevoegen.
         /// </remarks>
-        [HttpPost("manufacturer_create")]
-        public async Task<IActionResult> CreateManufacturer(
-            CreateManufacturerRequest request,
+        [HttpPost("AssetType_create")]
+        public async Task<IActionResult> CreateAssetType(
+            CreateAssetTypeRequest request,
             CancellationToken cancellationToken)
         {
-            var command = new CreateManufacturerCommand(
+            var command = new CreateAssetTypeCommand(
                 request.Name,
                 request.Description
                 );
@@ -60,18 +60,18 @@ namespace AssetManagement.Api.Controllers.Manufacturers
                 return BadRequest(result.Error);
             }
 
-            return CreatedAtAction(nameof(CreateManufacturer), new { id = result.Value }, result.Value);
+            return CreatedAtAction(nameof(CreateAssetType), new { id = result.Value }, result.Value);
         }
         /// <summary>
-        /// Update Manufacturer.
+        /// Update AssetType.
         /// </summary>
         /// <remarks>
-        /// Requestable aanpassen zodat Manufacturer wel of niet gekozen kan worden.
+        /// Requestable aanpassen zodat AssetType wel of niet gekozen kan worden.
         /// </remarks>
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateManufacturer(int id, UpdateManufacturerRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> UpdateAssetType(int id, UpdateAssetTypeRequest request, CancellationToken cancellationToken)
         {
-            var command = new UpdateManufacturerCommand(
+            var command = new UpdateAssetTypeCommand(
                 id,
                 request.Requestable
             );

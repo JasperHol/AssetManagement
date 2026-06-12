@@ -4,6 +4,7 @@ using AssetManagement.Application.Abstractions.Email;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
+using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -42,6 +43,8 @@ public static class DependencyInjection
         services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
 
         services.AddScoped<IModelRepository, ModelRepository>();
+
+        services.AddScoped<IAssetTypeRepository, AssetTypeRepository>();
 
         //services.AddScoped<IBookingRepository, BookingRepository>();
 

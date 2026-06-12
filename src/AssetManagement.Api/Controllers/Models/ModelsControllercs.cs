@@ -4,6 +4,9 @@ using AssetManagement.Application.Models.SearchModel;
 using AssetManagement.Application.Models.UpdateModel;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using static Bogus.DataSets.Name;
+using Swashbuckle.AspNetCore.Annotations;
+
 
 namespace AssetManagement.Api.Controllers.Models
 
@@ -18,7 +21,12 @@ namespace AssetManagement.Api.Controllers.Models
         {
             _sender = sender;
         }
-
+        /// <summary>
+        /// Get all Models.
+        /// </summary>
+        /// <remarks>
+        /// Lijst van alle modellen ophalen.
+        /// </remarks>
         [HttpGet("all_models")]
         public async Task<IActionResult> SearchModels(CancellationToken cancellationToken)
         {
@@ -30,7 +38,12 @@ namespace AssetManagement.Api.Controllers.Models
             return Ok(result.Value);
         }
 
-
+        /// <summary>
+        /// Create Model.
+        /// </summary>
+        /// <remarks>
+        /// Nieuw model toevoegen.
+        /// </remarks>
         [HttpPost("model_create")]
         public async Task<IActionResult> CreateModel(
             CreateModelRequest request,
@@ -52,15 +65,21 @@ namespace AssetManagement.Api.Controllers.Models
             return CreatedAtAction(nameof(CreateModel), new { id = result.Value }, result.Value);
         }
 
-        [HttpPost("model_update")]
+        /// <summary>
+        /// Update Model.
+        /// </summary>
+        /// <remarks>
+        /// Requestable aanpassen zodat een model wel of niet gekozen kan worden..
+        /// </remarks>
+        [HttpPut("model_update")]
         public async Task<IActionResult> UpdateModel(
-            UpdateModelRequest request,
-            CancellationToken cancellationToken)
+        UpdateModelRequest request,
+        CancellationToken cancellationToken)
         {
             var command = new UpdateModelCommand(
                 request.Id,
                 request.Requestable
-                );
+            );
 
             var result = await _sender.Send(command, cancellationToken);
 
@@ -69,7 +88,7 @@ namespace AssetManagement.Api.Controllers.Models
                 return BadRequest(result.Error);
             }
 
-            return CreatedAtAction(nameof(UpdateModel), new { id = result.Value }, result.Value);
+            return Ok(result.Value);
         }
 
     }
