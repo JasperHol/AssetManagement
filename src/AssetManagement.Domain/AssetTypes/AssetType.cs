@@ -1,7 +1,7 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetTypes.Events;
 using AssetManagement.Domain.Shared;
-
+//AssetType
 namespace AssetManagement.Domain.AssetTypes;
 
 public sealed class AssetType : Entity
