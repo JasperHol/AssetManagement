@@ -3,6 +3,7 @@
 using AssetManagement.Application.AssetTypes.CreateAssetType;
 using AssetManagement.Application.AssetTypes.SearchAssetType;
 using AssetManagement.Application.AssetTypes.UpdateAssetType;
+using Azure.Core;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         /// Get All AssetTypes.
         /// </summary>
         /// <remarks>
-        /// Lijst van alle Manufcturers ophalen.
+        /// Lijst van alle AssetTypes ophalen.
         /// </remarks>
         [HttpGet("all_AssetTypes")]
         public async Task<IActionResult> SearchAssetTypes(CancellationToken cancellationToken)
@@ -50,7 +51,17 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         {
             var command = new CreateAssetTypeCommand(
                 request.Name,
-                request.Description
+                request.Description,
+                request.Requestable,
+                request.DepreciationValue,
+                request.DepreciationPeriod,
+                request.DataSource,
+                request.JiraId,
+                request.PrefixName,
+                request.SecuritySensitive,
+                request.MobileEquipment,
+                request.ModelId,
+                request.AssetKindId
                 );
 
             var result = await _sender.Send(command, cancellationToken);
@@ -68,11 +79,11 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         /// <remarks>
         /// Requestable aanpassen zodat AssetType wel of niet gekozen kan worden.
         /// </remarks>
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAssetType(int id, UpdateAssetTypeRequest request, CancellationToken cancellationToken)
+        [HttpPut("assettype_update")]
+        public async Task<IActionResult> UpdateAssetType(UpdateAssetTypeRequest request, CancellationToken cancellationToken)
         {
             var command = new UpdateAssetTypeCommand(
-                id,
+                request.Id,
                 request.Requestable
             );
 

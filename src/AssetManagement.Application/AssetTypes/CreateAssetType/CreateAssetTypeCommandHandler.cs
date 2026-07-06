@@ -29,7 +29,19 @@ internal sealed class CreateAssetTypeCommandHandler
     {
         var assetType = AssetType.Create(
             new Name(request.Name),
-            new Description(request.Description)
+            new Description(request.Description),
+            new Requestable(request.Requestable),
+            new DepreciationValue(request.DepreciationValue),
+            new DepreciationPeriod(request.DepreciationPeriod),
+            new DataSource(request.DataSource),
+            new JiraId(request.JiraId),
+            new PrefixName(request.PrefixName),
+            new SecuritySensitive(request.SecuritySensitive),
+            new MobileEquipment(request.MobileEquipment),
+            new ModelId(request.ModelId),
+            new AssetKindId(request.AssetKindId)
+
+
         // Requestable defaults to true
         );
 

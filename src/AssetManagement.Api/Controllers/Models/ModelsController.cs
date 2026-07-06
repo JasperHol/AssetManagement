@@ -76,7 +76,7 @@ namespace AssetManagement.Api.Controllers.Models
         UpdateModelRequest request,
         CancellationToken cancellationToken)
         {
-            var command = new UpdateModelCommand(
+            var command = new UpdateAssetKindlCommand(
                 request.Id,
                 request.Requestable
             );

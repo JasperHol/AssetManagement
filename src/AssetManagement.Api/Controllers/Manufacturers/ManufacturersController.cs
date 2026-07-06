@@ -3,6 +3,7 @@
 using AssetManagement.Application.Manufacturers.CreateManufacturer;
 using AssetManagement.Application.Manufacturers.SearchManufacturer;
 using AssetManagement.Application.Manufacturers.UpdateManufacturer;
+using Azure.Core;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace AssetManagement.Api.Controllers.Manufacturers
         /// Get All Manufacturers.
         /// </summary>
         /// <remarks>
-        /// Lijst van alle Manufcturers ophalen.
+        /// Lijst van alle Manufacturers ophalen.
         /// </remarks>
         [HttpGet("all_manufacturers")]
         public async Task<IActionResult> SearchManufacturers(CancellationToken cancellationToken)
@@ -68,11 +69,11 @@ namespace AssetManagement.Api.Controllers.Manufacturers
         /// <remarks>
         /// Requestable aanpassen zodat Manufacturer wel of niet gekozen kan worden.
         /// </remarks>
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateManufacturer(int id, UpdateManufacturerRequest request, CancellationToken cancellationToken)
+        [HttpPut("manufacturer_update")]
+        public async Task<IActionResult> UpdateManufacturer(UpdateManufacturerRequest request, CancellationToken cancellationToken)
         {
             var command = new UpdateManufacturerCommand(
-                id,
+                request.Id,
                 request.Requestable
             );
 

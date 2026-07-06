@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.CreateModel;
 
-internal sealed class CreateModelCommandHandler
+internal sealed class CreateAssetKindCommandHandler
     : ICommandHandler<CreateModelCommand, int>
 {
     private readonly IModelRepository _modelRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public CreateModelCommandHandler(
+    public CreateAssetKindCommandHandler(
         IModelRepository modelRepository,
         IUnitOfWork unitOfWork)
     {

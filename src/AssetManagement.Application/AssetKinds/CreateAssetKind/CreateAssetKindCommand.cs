@@ -5,6 +5,5 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.Models.SearchModel;
-
-public sealed record SearchModelsQuery() : IQuery<IReadOnlyList<AssetKindResponse>>;
+namespace AssetManagement.Application.AssetKinds.CreateAssetKind;
+public record CreateAssetKindCommand(string Name,bool HasMacAddress,bool IsPhysical)    : ICommand<int>;

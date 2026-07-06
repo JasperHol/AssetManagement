@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.Models.UpdateModel;
+namespace AssetManagement.Application.AssetKinds.CreateAssetKind;
 
-internal class AssetKindUpdatedDomainEventHandler
+internal class AssetKindCreatedDomainEventHandler
 {
 }

@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.UpdateModel;
 
-internal sealed class UpdateModelCommandHandler
-    : ICommandHandler<UpdateModelCommand, int>
+internal sealed class UpdateAssetKindCommandHandler
+    : ICommandHandler<UpdateAssetKindlCommand, int>
 {
     private readonly IModelRepository _modelRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public UpdateModelCommandHandler(
+    public UpdateAssetKindCommandHandler(
         IModelRepository modelRepository,
         IUnitOfWork unitOfWork)
     {
@@ -25,7 +25,7 @@ internal sealed class UpdateModelCommandHandler
     }
 
     public async Task<Result<int>> Handle(
-    UpdateModelCommand request,
+    UpdateAssetKindlCommand request,
     CancellationToken cancellationToken)
     {
         var model = await _modelRepository

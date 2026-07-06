@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.UpdateModel;
 
-public record UpdateModelCommand(int Id,
+public record UpdateAssetKindlCommand(int Id,
     bool Requestable)
     : ICommand<int>;

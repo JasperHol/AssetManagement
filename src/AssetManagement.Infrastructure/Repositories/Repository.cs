@@ -19,7 +19,12 @@ internal abstract class Repository<T>
     {
         return await DbContext
             .Set<T>()
-            .FirstOrDefaultAsync(user => user.Id == id, cancellationToken);
+          .FirstOrDefaultAsync(user => user.Id == id, cancellationToken);
+          //.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id, cancellationToken);
+          //.FirstOrDefaultAsync(e => Microsoft.EntityFrameworkCore.EF.Property<int>(e, "Id") == id, cancellationToken);
+
+
+
     }
 
     public void Add(T entity)

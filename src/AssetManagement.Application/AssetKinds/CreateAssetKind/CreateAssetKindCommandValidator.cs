@@ -1,4 +1,4 @@
-﻿using AssetManagement.Application.Models.CreateModel;
+﻿using AssetManagement.Application.AssetKinds.CreateAssetKind;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -6,18 +6,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.Models.CreateModel;
+namespace AssetManagement.Application.AssetKinds.CreateAssetKind;
 
 public sealed class CreateAssetKindCommandValidator
-    : AbstractValidator<CreateModelCommand>
+    : AbstractValidator<CreateAssetKindCommand>
 {
     public CreateAssetKindCommandValidator()
     {
         RuleFor(c => c.Name)
             .NotEmpty();
 
-        RuleFor(c => c.Description)
-            .NotEmpty();
+     
 
 
     }

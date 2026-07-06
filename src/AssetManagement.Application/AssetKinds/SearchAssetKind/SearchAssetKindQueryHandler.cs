@@ -1,6 +1,6 @@
 ﻿using AssetManagement.Application.Abstractions.Data;
 using AssetManagement.Application.Abstractions.Messaging;
-using AssetManagement.Application.Models.SearchModel;
+using AssetManagement.Application.AssetKinds.SearchAssetKind;
 using AssetManagement.Domain.Abstractions;
 using Dapper;
 using System;
@@ -9,19 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.Models.SearchModel;
-internal sealed class SearchModelsQueryHandler
-    : IQueryHandler<SearchModelsQuery, IReadOnlyList<AssetKindResponse>>
+namespace AssetManagement.Application.AssetKinds.SearchAssetKind;
+internal sealed class SearchAssetKindsQueryHandler
+    : IQueryHandler<SearchAssetKindsQuery, IReadOnlyList<AssetKindResponse>>
 {
     private readonly ISqlConnectionFactory _sqlConnectionFactory;
 
-    public SearchModelsQueryHandler(ISqlConnectionFactory sqlConnectionFactory)
+    public SearchAssetKindsQueryHandler(ISqlConnectionFactory sqlConnectionFactory)
     {
         _sqlConnectionFactory = sqlConnectionFactory;
     }
 
     public async Task<Result<IReadOnlyList<AssetKindResponse>>> Handle(
-        SearchModelsQuery request,
+        SearchAssetKindsQuery request,
         CancellationToken cancellationToken)
     {
         using var connection = _sqlConnectionFactory.CreateConnection();
@@ -30,18 +30,18 @@ internal sealed class SearchModelsQueryHandler
             SELECT
                 a.Id AS Id,
                 a.Name AS Name,
-                a.Description AS Description,
-                a.Requestable AS Requestable
-            FROM Models AS a
+                a.HasMacAddress AS HasMacAddress,
+                a.IsPhysical AS IsPhysical
+            FROM AssetKinds AS a
             
             """;
 
 
 
-        var models = await connection.QueryAsync<AssetKindResponse>(sql);
+        var AssetKinds = await connection.QueryAsync<AssetKindResponse>(sql);
 
-        //return Result.Success<IReadOnlyList<ModelResponse>>(manufacturers.ToList());
+        //return Result.Success<IReadOnlyList<AssetKindResponse>>(manufacturers.ToList());
 
-        return models.ToList();
+        return AssetKinds.ToList();
     }
 }

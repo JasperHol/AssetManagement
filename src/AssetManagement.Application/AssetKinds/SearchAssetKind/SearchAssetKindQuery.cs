@@ -5,6 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.Models.SearchModel;
+namespace AssetManagement.Application.AssetKinds.SearchAssetKind;
 
-public sealed record SearchModelsQuery() : IQuery<IReadOnlyList<AssetKindResponse>>;
+public sealed record SearchAssetKindsQuery() : IQuery<IReadOnlyList<AssetKindResponse>>;

@@ -15,6 +15,15 @@ public sealed class AssetTypeResponse
     public string Description { get; init; }
 
     public bool Requestable { get; init; }
+    public int DepreciationValue { get; init; }
+    public int DepreciationPeriod { get; init; }
+    public string DataSource { get; init; }
+    public int JiraId { get; init; }
+    public string PrefixName { get; init; }
+    public bool SecuritySensitive { get; init; }
+    public bool MobileEquipment { get; init; }
+    public int ModelId { get; init; }
+    public int AssetKindId { get; init; }
 
 
 }

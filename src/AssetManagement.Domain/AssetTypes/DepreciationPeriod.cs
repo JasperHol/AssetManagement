@@ -6,4 +6,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.AssetTypes;
 
-public record DepreciationPeriod(string Value);  
+public record DepreciationPeriod(int Value);  

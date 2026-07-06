@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.Models.SearchModel;
+namespace AssetManagement.Application.AssetKinds.SearchAssetKind;
 
 public sealed class AssetKindResponse
 {
@@ -12,9 +12,9 @@ public sealed class AssetKindResponse
 
     public string Name { get; init; }
 
-    public string Description { get; init; }
+    public string HasMacAddress { get; init; }
 
-    public bool Requestable { get; init; }
+    public bool IsPhysical { get; init; }
 
 
 }

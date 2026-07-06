@@ -6,4 +6,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.AssetTypes;
 
-public record JiraId(string Value);
+public record JiraId(int Value);

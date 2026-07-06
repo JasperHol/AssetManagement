@@ -31,7 +31,16 @@ internal sealed class SearchAssetTypesQueryHandler
                 a.Id AS Id,
                 a.Name AS Name,
                 a.Description AS Description,
-                a.Requestable AS Requestable
+                a.Requestable AS Requestable,
+                a.DepreciationValue AS DepreciationValue,
+                a.DepreciationPeriod AS DepreciationPeriod,
+                a.DataSource AS DataSource,
+                a.JiraId AS JiraId,
+                a.PrefixName AS PrefixName,
+                a.SecuritySensitive AS SecuritySensitive,
+                a.MobileEquipment AS MobileEquipment,
+                a.ModelId AS ModelId,
+                a.AssetKindId AS AssetKindId
             FROM AssetTypes AS a
             
             """;
