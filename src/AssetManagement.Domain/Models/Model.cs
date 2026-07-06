@@ -27,7 +27,7 @@ public sealed class Model : Entity
     private Model()
     {
     }
-
+    public AssetManagement.Domain.AssetTypes.ModelId Id { get; private set; }
     public Name Name { get; private set; }
     public Description Description { get; private set; }
     public Requestable Requestable { get; private set; }
@@ -59,8 +59,9 @@ public sealed class Model : Entity
     {
         Requestable = Requestable.Toggle();
 
-        RaiseDomainEvent(new ModelUpdatedDomainEvent(Id, Requestable));
+        RaiseDomainEvent(new ModelUpdatedDomainEvent(Id.Value, Requestable));
     }
+
 
 
 }

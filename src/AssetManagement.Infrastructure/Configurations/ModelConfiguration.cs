@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AssetManagement.Domain.AssetTypes;
 
 namespace AssetManagement.Infrastructure.Configurations;
 
@@ -17,6 +18,12 @@ internal sealed class ModelConfiguration : IEntityTypeConfiguration<Model>
         builder.ToTable("Models");
 
         builder.HasKey(model => model.Id);
+
+        builder.Property(model => model.Id)
+            .HasConversion(
+                id => id.Value,
+                value => new ModelId(value))
+            .ValueGeneratedOnAdd();
 
         builder.Property(model => model.Id)
                .ValueGeneratedOnAdd(); // 👈 tells EF this is IDENTITY
@@ -48,5 +55,8 @@ internal sealed class ModelConfiguration : IEntityTypeConfiguration<Model>
                 .WithMany()
                 .HasForeignKey(model => model.ManufacturerId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+
+        
     }
 }

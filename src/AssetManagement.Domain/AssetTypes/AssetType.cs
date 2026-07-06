@@ -1,7 +1,7 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetTypes.Events;
 using AssetManagement.Domain.Shared;
-//AssetType
+
 namespace AssetManagement.Domain.AssetTypes;
 
 public sealed class AssetType : Entity
@@ -34,12 +34,12 @@ public sealed class AssetType : Entity
         AssetKindId = assetKindId;
     }
 
-    private AssetType() { }
-
+    private AssetType() 
+    {    
+    }
     public Name Name { get; private set; }
     public Description Description { get; private set; }
     public Requestable Requestable { get; private set; }
-
     public DepreciationValue? DepreciationValue { get; private set; }
     public DepreciationPeriod? DepreciationPeriod { get; private set; }
     public DataSource? DataSource { get; private set; }

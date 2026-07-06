@@ -46,6 +46,6 @@ internal sealed class UpdateModelCommandHandler
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return Result.Success(model.Id);
+        return Result.Success(model.Id.Value);
     }
 }

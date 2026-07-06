@@ -4,6 +4,7 @@ using AssetManagement.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260703120715_assettype_model_relationship")]
+    partial class assettype_model_relationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,8 +114,6 @@ namespace AssetManagement.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ModelId");
-
                     b.ToTable("AssetTypes", (string)null);
                 });
 
@@ -175,15 +176,6 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("Models", (string)null);
-                });
-
-            modelBuilder.Entity("AssetManagement.Domain.AssetTypes.AssetType", b =>
-                {
-                    b.HasOne("AssetManagement.Domain.Models.Model", null)
-                        .WithMany()
-                        .HasForeignKey("ModelId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.Models.Model", b =>

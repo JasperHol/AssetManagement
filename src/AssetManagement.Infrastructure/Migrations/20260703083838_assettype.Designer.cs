@@ -4,6 +4,7 @@ using AssetManagement.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260703083838_assettype")]
+    partial class assettype
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,34 +24,6 @@ namespace AssetManagement.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("AssetManagement.Domain.AssetKinds.AssetKind", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("HasMacAddress")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("1");
-
-                    b.Property<bool>("IsPhysical")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("1");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AssetKinds", (string)null);
-                });
 
             modelBuilder.Entity("AssetManagement.Domain.AssetTypes.AssetType", b =>
                 {
@@ -58,9 +33,8 @@ namespace AssetManagement.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("AssetKindId")
-                        .HasColumnType("int")
-                        .HasColumnName("AssetKindId");
+                    b.Property<int>("AssetKindId")
+                        .HasColumnType("int");
 
                     b.Property<string>("DataSource")
                         .HasMaxLength(255)
@@ -110,8 +84,6 @@ namespace AssetManagement.Infrastructure.Migrations
                         .HasDefaultValueSql("0");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ModelId");
 
                     b.ToTable("AssetTypes", (string)null);
                 });
@@ -175,15 +147,6 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("Models", (string)null);
-                });
-
-            modelBuilder.Entity("AssetManagement.Domain.AssetTypes.AssetType", b =>
-                {
-                    b.HasOne("AssetManagement.Domain.Models.Model", null)
-                        .WithMany()
-                        .HasForeignKey("ModelId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.Models.Model", b =>
