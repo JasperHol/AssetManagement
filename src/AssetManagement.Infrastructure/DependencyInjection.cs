@@ -2,9 +2,10 @@
 using AssetManagement.Application.Abstractions.Data;
 using AssetManagement.Application.Abstractions.Email;
 using AssetManagement.Domain.Abstractions;
+using AssetManagement.Domain.AssetKinds;
+using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
-using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -36,19 +37,13 @@ public static class DependencyInjection
 
         //services.AddScoped<IUserRepository, UserRepository>();
 
-        //services.AddScoped<IApartmentRepository, ApartmentRepository>();
-
-        //services.AddScoped<IInventoryItemRepository, InventoryItemRepository>();
-
         services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
 
         services.AddScoped<IModelRepository, ModelRepository>();
 
         services.AddScoped<IAssetTypeRepository, AssetTypeRepository>();
-
-        //services.AddScoped<IBookingRepository, BookingRepository>();
-
-        //services.AddScoped<IReviewRepository, ReviewRepository>();
+        
+        services.AddScoped<IAssetKindRepository, AssetKindRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 

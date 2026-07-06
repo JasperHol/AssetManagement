@@ -1,6 +1,5 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Manufacturers.Events;
-//using AssetManagement.Domain.Models;
 using AssetManagement.Domain.Shared;
 
 namespace AssetManagement.Domain.Manufacturers;
