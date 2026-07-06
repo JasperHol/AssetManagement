@@ -111,11 +111,11 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
                 .HasForeignKey(assettype => assettype.ModelId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-         //builder
-         //       .HasOne<AssetKind>()
-         //       .WithMany()
-         //       .HasForeignKey(assettype => assettype.AssetKindId)
-         //       .OnDelete(DeleteBehavior.Restrict);
+        builder
+               .HasOne<AssetKind>()
+               .WithMany()
+               .HasForeignKey(assettype => assettype.AssetKindId)
+               .OnDelete(DeleteBehavior.Restrict);
 
     }
 }

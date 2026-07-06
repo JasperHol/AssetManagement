@@ -20,6 +20,9 @@ internal sealed class AssetKindConfiguration : IEntityTypeConfiguration<AssetKin
         builder.Property(assetKind => assetKind.Id)
                .ValueGeneratedOnAdd(); // 👈 tells EF this is IDENTITY
 
+        builder.Property(k => k.Id)
+               .HasConversion(id => id.Value, v => new Domain.AssetTypes.AssetKindId(v))
+               .ValueGeneratedOnAdd();
 
         builder.Property(AssetKind => AssetKind.Name)
                 .HasMaxLength(200)

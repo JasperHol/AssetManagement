@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "F:\\Users\\jho\\Documents\\AssetManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assettypes\\assettype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assettypes\\assettype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\AssetManagement.Infrastructure\\Migrations\\20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\configurations\\assetkindconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\configurations\\assetkindconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assettypes\\assetkindid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,35 @@
       "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assetkinds\\assetkind.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\jho\\.copilot\\plans\\plan-add-assetkind-value-object-id-and-ef-mapping.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assettypes\\modelid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assettypes\\modelid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\configurations\\assettypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\configurations\\assettypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assetkinds\\iassetkindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assetkinds\\iassetkindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assettypes\\assettype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assettypes\\assettype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706091447_relatie_model_ModelId_Opnieuw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\AssetManagement.Infrastructure\\Migrations\\20260706091447_relatie_model_ModelId_Opnieuw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706091219_relataieassetkindtoevoegen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\AssetManagement.Infrastructure\\Migrations\\20260706091219_relataieassetkindtoevoegen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\manufacturers\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,28 +58,12 @@
       "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\models\\manufacturerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\configurations\\assetkindconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\configurations\\assetkindconfigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assetkinds\\events\\assetkinddomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assetkinds\\events\\assetkinddomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703120759_assettype_model_relationship2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\AssetManagement.Infrastructure\\Migrations\\20260703120759_assettype_model_relationship2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703120715_assettype_model_relationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\AssetManagement.Infrastructure\\Migrations\\20260703120715_assettype_model_relationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\configurations\\modelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\configurations\\modelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assettypes\\modelid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assettypes\\modelid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\configurations\\manufacturerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,10 +102,6 @@
       "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\assetkinds\\iassetkindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\assetkinds\\iassetkindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\repositories\\assetkindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\repositories\\assetkindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -109,6 +116,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\migrations\\20260703120759_assettype_model_relationship2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\migrations\\20260703120759_assettype_model_relationship2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\migrations\\20260703120715_assettype_model_relationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\migrations\\20260703120715_assettype_model_relationship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,7 +133,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 267,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,93 +145,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Model.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\Model.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Models\\Model.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\Model.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\Models\\Model.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAUwB8AAAA4AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Migrations\\20260706093908_relatie_AssetType_AssetKindId_Opnieuw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:15:42.032Z",
+              "WhenOpened": "2026-07-06T09:39:08.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AssetTypeConfiguration.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
-              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAF4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:09:35.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AssetKindConfigration.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
-              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwC4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T08:33:52.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssetKind.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwB0AAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T14:58:38.603Z",
-              "EditorCaption": ""
+              "Title": "plan-add-assetkind-value-object-id-and-ef-mapping.md [Preview]",
+              "DocumentMoniker": "C:\\Users\\jho\\.copilot\\plans\\plan-add-assetkind-value-object-id-and-ef-mapping.md",
+              "ToolTip": "C:\\Users\\jho\\.copilot\\plans\\plan-add-assetkind-value-object-id-and-ef-mapping.md [Preview]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-07-06T09:29:01.041Z",
+              "EditorCaption": " [Preview]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ManufacturerId.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
+              "Title": "ModelId.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:15:59.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Manufacturer.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:59:59.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AssetType.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAIAwwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T15:04:04.075Z",
+              "WhenOpened": "2026-07-06T09:24:56.462Z",
               "EditorCaption": ""
             },
             {
@@ -229,12 +189,140 @@
               "RelativeToolTip": "src\\AssetManagement.Domain\\AssetTypes\\AssetKindId.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T14:59:05.353Z",
+              "WhenOpened": "2026-07-06T09:23:45.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssetKind.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetKinds\\AssetKind.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T14:58:38.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssetKindConfigration.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\AssetKindConfigration.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T08:33:52.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AssetTypeConfiguration.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\AssetTypeConfiguration.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T09:09:35.814Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "IAssetKindRepository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T08:33:11.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20260706091447_relatie_model_ModelId_Opnieuw.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706091447_relatie_model_ModelId_Opnieuw.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260706091447_relatie_model_ModelId_Opnieuw.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706091447_relatie_model_ModelId_Opnieuw.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Migrations\\20260706091447_relatie_model_ModelId_Opnieuw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T09:14:47.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssetType.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetTypes\\AssetType.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIAwwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T15:04:04.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\Model.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Models\\Model.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\Model.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\Models\\Model.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwB0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T09:15:42.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ManufacturerId.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\Models\\ManufacturerId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T09:15:59.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20260706091219_relataieassetkindtoevoegen.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706091219_relataieassetkindtoevoegen.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260706091219_relataieassetkindtoevoegen.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260706091219_relataieassetkindtoevoegen.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Migrations\\20260706091219_relataieassetkindtoevoegen.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-06T09:12:19.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\Manufacturers\\Manufacturer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-03T09:59:59.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "AssetKindDomainEvent.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\Events\\AssetKindDomainEvent.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetKinds\\Events\\AssetKindDomainEvent.cs",
@@ -242,12 +330,11 @@
               "RelativeToolTip": "src\\AssetManagement.Domain\\AssetKinds\\Events\\AssetKindDomainEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T12:16:35.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-03T12:16:35.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 29,
               "Title": "20260703120759_assettype_model_relationship2.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703120759_assettype_model_relationship2.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260703120759_assettype_model_relationship2.cs",
@@ -255,12 +342,11 @@
               "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Migrations\\20260703120759_assettype_model_relationship2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T12:07:59.72Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-03T12:07:59.72Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 30,
               "Title": "20260703120715_assettype_model_relationship.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703120715_assettype_model_relationship.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260703120715_assettype_model_relationship.cs",
@@ -268,12 +354,11 @@
               "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Migrations\\20260703120715_assettype_model_relationship.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T12:07:15.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-03T12:07:15.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "ModelConfiguration.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\ModelConfiguration.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\ModelConfiguration.cs",
@@ -281,25 +366,11 @@
               "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\ModelConfiguration.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T09:11:17.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-03T09:11:17.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ModelId.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetTypes\\ModelId.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T15:01:59.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ManufacturerConfiguration.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\ManufacturerConfiguration.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\ManufacturerConfiguration.cs",
@@ -307,12 +378,11 @@
               "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\ManufacturerConfiguration.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T14:23:34.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-02T14:23:34.601Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "AssetTypeRepository.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\AssetTypeRepository.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Repositories\\AssetTypeRepository.cs",
@@ -324,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "CreateModelCommandHandler.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\Models\\CreateModel\\CreateModelCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Application\\Models\\CreateModel\\CreateModelCommandHandler.cs",
@@ -336,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "UpdateModelCommandHandler.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\Models\\UpdateModel\\UpdateModelCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Application\\Models\\UpdateModel\\UpdateModelCommandHandler.cs",
@@ -348,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "20260703083838_assettype.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703083838_assettype.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260703083838_assettype.cs",
@@ -360,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "20260703085050_assetkind.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703085050_assetkind.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260703085050_assetkind.cs",
@@ -372,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\ApplicationDbContext.cs",
@@ -384,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "20260703083838_assettype.Designer.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703083838_assettype.Designer.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260703083838_assettype.Designer.cs",
@@ -396,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "20260703085050_assetkind.Designer.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260703085050_assetkind.Designer.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260703085050_assetkind.Designer.cs",
@@ -408,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "AssetKindRepository.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\AssetKindRepository.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Repositories\\AssetKindRepository.cs",
@@ -420,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\DependencyInjection.cs",
@@ -432,19 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IAssetKindRepository.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\AssetKinds\\IAssetKindRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-03T08:33:11.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
@@ -456,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "ModelRepository.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\ModelRepository.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Repositories\\ModelRepository.cs",

@@ -1,6 +1,7 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetKinds;
 using AssetManagement.Domain.AssetKinds.Events;
+using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.Shared;
 
 namespace AssetManagement.Domain.AssetKinds;
@@ -24,7 +25,8 @@ public sealed class AssetKind : Entity
     {
     }
 
-    public AssetManagement.Domain.AssetKinds.AssetKind Id { get; private set; }
+    public AssetKindId Id { get; private set; }
+    //public AssetManagement.Domain.AssetKinds.AssetKind Id { get; private set; }
     public Name Name { get; private set; }
     public HasMacAddress HasMacAddress { get; private set; } = default!;
     public IsPhysical IsPhysical { get; private set; } = default!;
