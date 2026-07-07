@@ -15,9 +15,9 @@ internal sealed class AssetKindRepository : Repository<AssetKind>, IAssetKindRep
     {
 
     }
-    public AssetKind Update(AssetKind AssetKind)
+    public AssetKind Update(AssetKind assetKind)
     {
-        DbContext.Set<AssetKind>().Update(AssetKind);
-        return AssetKind;
+        DbContext.Set<AssetKind>().Update(assetKind);
+        return assetKind;
     }
 }

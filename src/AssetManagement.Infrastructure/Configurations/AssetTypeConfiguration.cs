@@ -1,7 +1,6 @@
 
 using AssetManagement.Domain.AssetKinds;
 using AssetManagement.Domain.AssetTypes;
-using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -27,17 +26,17 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
                .ValueGeneratedOnAdd(); // 👉 tells EF this is IDENTITY
 
         //Name
-        builder.Property(AssetType => AssetType.Name)
+        builder.Property(assetType => assetType.Name)
                 .HasMaxLength(200)
                 .HasConversion(name => name.Value, value => new AssetManagement.Domain.AssetTypes.Name(value));
 
         //Description
-        builder.Property(AssetType => AssetType.Description)
+        builder.Property(assetType => assetType.Description)
                 .HasMaxLength(2000)
                 .HasConversion(description => description.Value, value => new AssetManagement.Domain.AssetTypes.Description(value));
 
         //Requestable
-        builder.Property(AssetType => AssetType.Requestable)
+        builder.Property(assetType => assetType.Requestable)
                 .HasConversion(
                 r => r.Value,
                 v => new AssetManagement.Domain.AssetTypes.Requestable(v))
@@ -59,7 +58,7 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
                 .IsRequired();
 
         //DataSource
-        builder.Property(AssetType => AssetType.DataSource)
+        builder.Property(assetType => assetType.DataSource)
                 .HasMaxLength(255)
                 .HasConversion(dataSource => dataSource.Value, value => new AssetManagement.Domain.AssetTypes.DataSource(value));
 
@@ -71,12 +70,12 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
                 .IsRequired();
 
         //PrefixName
-        builder.Property(AssetType => AssetType.PrefixName)
+        builder.Property(assetType => assetType.PrefixName)
                 .HasMaxLength(10)
                 .HasConversion(prefixName => prefixName.Value, value => new AssetManagement.Domain.AssetTypes.PrefixName(value));
 
         //SecuritySensitive
-        builder.Property(AssetType => AssetType.SecuritySensitive)
+        builder.Property(assetType => assetType.SecuritySensitive)
                 .HasConversion(
                 r => r.Value,
                 v => new AssetManagement.Domain.AssetTypes.SecuritySensitive(v))
@@ -84,7 +83,7 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
                .IsRequired();
 
         //MobileEquipment
-        builder.Property(AssetType => AssetType.MobileEquipment)
+        builder.Property(assetType => assetType.MobileEquipment)
                 .HasConversion(
                 r => r.Value,
                 v => new AssetManagement.Domain.AssetTypes.MobileEquipment(v))
@@ -93,13 +92,13 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
 
 
 
-        builder.Property(assettype => assettype.ModelId)
+        builder.Property(assetType => assetType.ModelId)
         .HasConversion(
             id => id.Value,
             value => new ModelId(value))
         .IsRequired(true);
 
-        builder.Property(assettype => assettype.AssetKindId)
+        builder.Property(assetType => assetType.AssetKindId)
         .HasConversion(
             id => id.Value,
             value => new AssetKindId(value))
@@ -108,13 +107,13 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
         builder
                 .HasOne<Model>()
                 .WithMany()
-                .HasForeignKey(assettype => assettype.ModelId)
+                .HasForeignKey(assetType => assetType.ModelId)
                 .OnDelete(DeleteBehavior.Restrict);
 
         builder
                .HasOne<AssetKind>()
                .WithMany()
-               .HasForeignKey(assettype => assettype.AssetKindId)
+               .HasForeignKey(assetType => assetType.AssetKindId)
                .OnDelete(DeleteBehavior.Restrict);
 
     }

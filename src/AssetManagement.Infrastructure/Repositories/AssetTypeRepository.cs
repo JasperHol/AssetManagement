@@ -15,9 +15,9 @@ internal sealed class AssetTypeRepository : Repository<AssetType>, IAssetTypeRep
     {
 
     }
-    public AssetType Update(AssetType AssetType)
+    public AssetType Update(AssetType assetType)
     {
-        DbContext.Set<AssetType>().Update(AssetType);
-        return AssetType;
+        DbContext.Set<AssetType>().Update(assetType);
+        return assetType;
     }
 }

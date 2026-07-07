@@ -1,8 +1,8 @@
 ﻿
 using AssetManagement.Api.Controllers.Users;
 
-using AssetManagement.Application.Users.CreateUser;
-using AssetManagement.Application.Users.SearchUsers;
+//using AssetManagement.Application.Users.CreateUser;
+//using AssetManagement.Application.Users.SearchUsers;
 using AssetManagement.Domain.Users;
 using MediatR;
 using Microsoft.AspNetCore.Http;

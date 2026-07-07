@@ -1,5 +1,4 @@
 ﻿using AssetManagement.Domain.Manufacturers;
-using AssetManagement.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -19,7 +18,7 @@ internal sealed class ManufacturerConfiguration : IEntityTypeConfiguration<Manuf
         builder.Property(manufacturer => manufacturer.Id)
                 .HasConversion(
                 id => id.Value,
-                value => new ManufacturerId(value))
+                value => new AssetManagement.Domain.Models.ManufacturerId(value))
                 .ValueGeneratedOnAdd();
 
         builder.HasKey(manufacturer => manufacturer.Id);
@@ -29,17 +28,17 @@ internal sealed class ManufacturerConfiguration : IEntityTypeConfiguration<Manuf
 
         builder.Property(manufacturer => manufacturer.Name)
                 .HasMaxLength(200)
-                .HasConversion(name => name.Value, value => new AssetManagement.Domain.Manufacturers.Name(value));
+                .HasConversion(name => name.Value, value => new Name(value));
 
         builder.Property(manufacturer => manufacturer.Description)
                 .HasMaxLength(2000)
-                .HasConversion(description => description.Value, value => new AssetManagement.Domain.Manufacturers.Description(value));
+                .HasConversion(description => description.Value, value => new Description(value));
 
 
         builder.Property(manufacturer => manufacturer.Requestable)
                 .HasConversion(
                 r => r.Value,
-                v => new AssetManagement.Domain.Manufacturers.Requestable(v))
+                v => new Requestable(v))
                .HasDefaultValueSql("1") // 👈 SQL literal, not CLR bool
                .IsRequired();
 

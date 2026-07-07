@@ -7,6 +7,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Manufacturers.UpdateManufacturer;
 
-public record UpdateManufacturerCommand(int Id,
-    bool Requestable)
-    : ICommand<int>;
+public record UpdateManufacturerCommand(int Id, bool Requestable)   : ICommand<int>;

@@ -7,6 +7,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.AssetTypes.UpdateAssetType;
 
-public record UpdateAssetTypeCommand(int Id,
-    bool Requestable)
-    : ICommand<int>;
+public record UpdateAssetTypeCommand(int Id, bool Requestable)   : ICommand<int>;
