@@ -1,8 +1,10 @@
 ﻿
 
+using AssetManagement.Api.Controllers.Manufacturers;
 using AssetManagement.Application.AssetTypes.CreateAssetType;
 using AssetManagement.Application.AssetTypes.SearchAssetType;
 using AssetManagement.Application.AssetTypes.UpdateAssetType;
+using AssetManagement.Application.Manufacturers.UpdateManufacturer;
 using Azure.Core;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -13,14 +15,8 @@ namespace AssetManagement.Api.Controllers.AssetTypes
 {
     [Route("api/AssetTypes")]
     [ApiController]
-    public class AssetTypesController : ControllerBase
+    public class AssetTypesController(ISender sender) : ControllerBase
     {
-        private readonly ISender _sender;
-
-        public AssetTypesController(ISender sender)
-        {
-            _sender = sender;
-        }
         /// <summary>
         /// Get All AssetTypes.
         /// </summary>
@@ -32,7 +28,7 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         {
             var query = new SearchAssetTypesQuery();
 
-            var result = await _sender.Send(query, cancellationToken);
+            var result = await sender.Send(query, cancellationToken);
 
             //return Ok(result.ToString());
             return Ok(result.Value);
@@ -64,7 +60,7 @@ namespace AssetManagement.Api.Controllers.AssetTypes
                 request.AssetKindId
                 );
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {
@@ -79,15 +75,17 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         /// <remarks>
         /// Requestable aanpassen zodat AssetType wel of niet gekozen kan worden.
         /// </remarks>
-        [HttpPut("assettype_update")]
-        public async Task<IActionResult> UpdateAssetType(UpdateAssetTypeRequest request, CancellationToken cancellationToken)
+        [HttpPut("assetType/{id:int}")]
+        public async Task<IActionResult> UpdateAssetType(
+            int id,
+            [FromBody] UpdateAssetTypeRequest request,
+            CancellationToken cancellationToken)
         {
             var command = new UpdateAssetTypeCommand(
-                request.Id,
-                request.Requestable
-            );
+                id,
+                request.Requestable);
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {

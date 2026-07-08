@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DomainRequestable = AssetManagement.Domain.Manufacturers.Requestable;
+
 
 namespace AssetManagement.Application.Manufacturers.UpdateManufacturer;
 
@@ -39,7 +41,11 @@ internal sealed class UpdateManufacturerCommandHandler
                     $"Manufacturer with id {request.Id} was not found"));
         }
 
-        manufacturer.ToggleRequestable();
+        //manufacturer.ToggleRequestable();
+
+        DomainRequestable requestable = new(request.Requestable);
+        manufacturer.ChangeRequestable(requestable);
+
 
         // Optional: only needed if entity is detached
         //_manufacturerRepository.Update(manufacturer);

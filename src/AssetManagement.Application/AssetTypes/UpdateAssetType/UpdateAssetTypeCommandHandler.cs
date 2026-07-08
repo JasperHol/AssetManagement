@@ -1,6 +1,8 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetTypes;
+using AssetManagement.Domain.Manufacturers;
+using DomainRequestable = AssetManagement.Domain.AssetTypes.Requestable;
 
 namespace AssetManagement.Application.AssetTypes.UpdateAssetType;
 
@@ -33,7 +35,10 @@ internal sealed class UpdateAssetTypeCommandHandler
                     $"AssetType with id {request.Id} was not found"));
         }
 
-        assetType.ToggleRequestable();
+        //assetType.ToggleRequestable();
+
+        DomainRequestable requestable = new(request.Requestable);
+        assetType.ChangeRequestable(requestable);
 
         // Optional: only needed if entity is detached
         //_AssetTypeRepository.Update(AssetType);

@@ -2,4 +2,4 @@
 
 namespace AssetManagement.Api.Controllers.AssetTypes;
 
-public sealed record UpdateAssetTypeRequest(int Id,bool Requestable);
+public sealed record UpdateAssetTypeRequest(bool Requestable);

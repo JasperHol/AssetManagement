@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.UpdateModel;
 
-public sealed class UpdateAssetKindCommandValidator
-    : AbstractValidator<UpdateAssetKindlCommand>
+public sealed class UpdateModelCommandValidator
+    : AbstractValidator<UpdateModelCommand>
 {
-    public UpdateAssetKindCommandValidator()
+    public UpdateModelCommandValidator()
     {
         // RuleFor(c => c.Requestable)
         //     .NotEmpty();

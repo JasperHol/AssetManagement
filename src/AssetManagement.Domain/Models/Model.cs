@@ -1,5 +1,6 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Manufacturers;
+using AssetManagement.Domain.Manufacturers.Events;
 using AssetManagement.Domain.Models.Events;
 using System;
 using System.Collections.Generic;
@@ -61,8 +62,14 @@ public sealed class Model : Entity
 
         RaiseDomainEvent(new ModelUpdatedDomainEvent(Id, Requestable));
     }
+    public void ChangeRequestable(Requestable requestable)
+    {
+        Requestable = requestable;
+
+        RaiseDomainEvent(
+            new ModelUpdatedDomainEvent(Id, Requestable));
 
 
-
+    }
 }
 

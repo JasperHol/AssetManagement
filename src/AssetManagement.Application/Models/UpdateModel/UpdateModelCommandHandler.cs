@@ -1,22 +1,24 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
 using AssetManagement.Application.Models.UpdateModel;
 using AssetManagement.Domain.Abstractions;
+using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DomainRequestable = AssetManagement.Domain.Models.Requestable;
 
 namespace AssetManagement.Application.Models.UpdateModel;
 
-internal sealed class UpdateAssetKindCommandHandler
-    : ICommandHandler<UpdateAssetKindlCommand, int>
+internal sealed class UpdateModelCommandHandler
+    : ICommandHandler<UpdateModelCommand, int>
 {
     private readonly IModelRepository _modelRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public UpdateAssetKindCommandHandler(
+    public UpdateModelCommandHandler(
         IModelRepository modelRepository,
         IUnitOfWork unitOfWork)
     {
@@ -25,7 +27,7 @@ internal sealed class UpdateAssetKindCommandHandler
     }
 
     public async Task<Result<int>> Handle(
-    UpdateAssetKindlCommand request,
+    UpdateModelCommand request,
     CancellationToken cancellationToken)
     {
         var model = await _modelRepository
@@ -39,7 +41,9 @@ internal sealed class UpdateAssetKindCommandHandler
                     $"Model with id {request.Id} was not found"));
         }
 
-        model.ToggleRequestable();
+        //model.ToggleRequestable();
+        DomainRequestable requestable = new(request.Requestable);
+        model.ChangeRequestable(requestable);
 
         // Optional: only needed if entity is detached
         //_modelRepository.Update(model);

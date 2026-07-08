@@ -13,4 +13,5 @@ public record Requestable(bool Value)
     public static Requestable False => new(false);
 
     public Requestable Toggle() => new(!Value);
+
 }

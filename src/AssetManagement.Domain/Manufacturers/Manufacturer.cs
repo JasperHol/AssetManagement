@@ -50,6 +50,13 @@ public sealed class Manufacturer : Entity
         RaiseDomainEvent(
             new ManufacturerUpdatedDomainEvent(Id,Requestable));
     }
+    public void ChangeRequestable(Requestable requestable)
+    {
+        Requestable = requestable;
+
+        RaiseDomainEvent(
+            new ManufacturerUpdatedDomainEvent(Id, Requestable));
+    }
 
 
 }

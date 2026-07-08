@@ -13,14 +13,8 @@ namespace AssetManagement.Api.Controllers.Manufacturers
 {
     [Route("api/Manufacturers")]
     [ApiController]
-    public class ManufacturersController : ControllerBase
+    public class ManufacturersController(ISender sender) : ControllerBase
     {
-        private readonly ISender _sender;
-
-        public ManufacturersController(ISender sender)
-        {
-            _sender = sender;
-        }
         /// <summary>
         /// Get All Manufacturers.
         /// </summary>
@@ -32,7 +26,7 @@ namespace AssetManagement.Api.Controllers.Manufacturers
         {
             var query = new SearchManufacturersQuery();
 
-            var result = await _sender.Send(query, cancellationToken);
+            var result = await sender.Send(query, cancellationToken);
 
             //return Ok(result.ToString());
             return Ok(result.Value);
@@ -54,7 +48,7 @@ namespace AssetManagement.Api.Controllers.Manufacturers
                 request.Description
                 );
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {
@@ -63,21 +57,49 @@ namespace AssetManagement.Api.Controllers.Manufacturers
 
             return CreatedAtAction(nameof(CreateManufacturer), new { id = result.Value }, result.Value);
         }
+        ///// <summary>
+        ///// Update Manufacturer.
+        ///// </summary>
+        ///// <remarks>
+        ///// Requestable aanpassen zodat Manufacturer wel of niet gekozen kan worden.
+        ///// </remarks>
+        //[HttpPut("manufacturer_update")]
+        //public async Task<IActionResult> UpdateManufacturer(UpdateManufacturerRequest request, CancellationToken cancellationToken)
+        //{
+        //    var command = new UpdateManufacturerCommand(
+        //        request.Id,
+        //        request.Requestable
+        //    );
+
+        //    var result = await _sender.Send(command, cancellationToken);
+
+        //    if (result.IsFailure)
+        //    {
+        //        return BadRequest(result.Error);
+        //    }
+
+        //    return NoContent();
+        //}
+
+
+
         /// <summary>
         /// Update Manufacturer.
         /// </summary>
         /// <remarks>
-        /// Requestable aanpassen zodat Manufacturer wel of niet gekozen kan worden.
+        /// Updates whether a manufacturer can be selected.
         /// </remarks>
-        [HttpPut("manufacturer_update")]
-        public async Task<IActionResult> UpdateManufacturer(UpdateManufacturerRequest request, CancellationToken cancellationToken)
+        [HttpPut("manufacturer/{id:int}")]
+        public async Task<IActionResult> UpdateManufacturer(
+            int id,
+            [FromBody] UpdateManufacturerRequest request,
+            CancellationToken cancellationToken)
         {
             var command = new UpdateManufacturerCommand(
-                request.Id,
-                request.Requestable
-            );
+                id,
+                request.Requestable);
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {

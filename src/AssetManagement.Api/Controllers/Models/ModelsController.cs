@@ -1,11 +1,13 @@
-﻿using AssetManagement.Api.Controllers.Models;
+﻿using AssetManagement.Api.Controllers.Manufacturers;
+using AssetManagement.Api.Controllers.Models;
+using AssetManagement.Application.Manufacturers.UpdateManufacturer;
 using AssetManagement.Application.Models.CreateModel;
 using AssetManagement.Application.Models.SearchModel;
 using AssetManagement.Application.Models.UpdateModel;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static Bogus.DataSets.Name;
 using Swashbuckle.AspNetCore.Annotations;
+using static Bogus.DataSets.Name;
 
 
 namespace AssetManagement.Api.Controllers.Models
@@ -13,14 +15,8 @@ namespace AssetManagement.Api.Controllers.Models
 {
     [Route("api/Models")]
     [ApiController]
-    public class ModelsController : ControllerBase
+    public class ModelsController(ISender sender) : ControllerBase
     {
-        private readonly ISender _sender;
-
-        public ModelsController(ISender sender)
-        {
-            _sender = sender;
-        }
         /// <summary>
         /// Get all Models.
         /// </summary>
@@ -32,7 +28,7 @@ namespace AssetManagement.Api.Controllers.Models
         {
             var query = new SearchModelsQuery();
 
-            var result = await _sender.Send(query, cancellationToken);
+            var result = await sender.Send(query, cancellationToken);
 
             //return Ok(result.ToString());
             return Ok(result.Value);
@@ -55,7 +51,7 @@ namespace AssetManagement.Api.Controllers.Models
                 request.ManufacturerId
                 );
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {
@@ -71,24 +67,24 @@ namespace AssetManagement.Api.Controllers.Models
         /// <remarks>
         /// Requestable aanpassen zodat een model wel of niet gekozen kan worden..
         /// </remarks>
-        [HttpPut("model_update")]
-        public async Task<IActionResult> UpdateModel(
-        UpdateModelRequest request,
-        CancellationToken cancellationToken)
+        [HttpPut("model/{id:int}")]
+        public async Task<IActionResult> UpdateManufacturer(
+            int id,
+            [FromBody] UpdateModelRequest request,
+            CancellationToken cancellationToken)
         {
-            var command = new UpdateAssetKindlCommand(
-                request.Id,
-                request.Requestable
-            );
+            var command = new UpdateModelCommand(
+                id,
+                request.Requestable);
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {
                 return BadRequest(result.Error);
             }
 
-            return Ok(result.Value);
+            return NoContent();
         }
 
     }

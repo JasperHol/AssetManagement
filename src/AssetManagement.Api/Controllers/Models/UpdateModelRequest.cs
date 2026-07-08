@@ -1,3 +1,3 @@
 ﻿namespace AssetManagement.Api.Controllers.Models;
 
-public sealed record UpdateModelRequest(int Id,bool Requestable);
+public sealed record UpdateModelRequest(bool Requestable);

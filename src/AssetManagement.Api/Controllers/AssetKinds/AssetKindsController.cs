@@ -12,14 +12,8 @@ namespace AssetManagement.Api.Controllers.AssetKinds
 {
     [Route("api/AssetKinds")]
     [ApiController]
-    public class AssetKindsController : ControllerBase
+    public class AssetKindsController(ISender sender) : ControllerBase
     {
-        private readonly ISender _sender;
-
-        public AssetKindsController(ISender sender)
-        {
-            _sender = sender;
-        }
         /// <summary>
         /// Get All AssetKinds.
         /// </summary>
@@ -31,7 +25,7 @@ namespace AssetManagement.Api.Controllers.AssetKinds
         {
             var query = new SearchAssetKindsQuery();
 
-            var result = await _sender.Send(query, cancellationToken);
+            var result = await sender.Send(query, cancellationToken);
 
             //return Ok(result.ToString());
             return Ok(result.Value);
@@ -55,7 +49,7 @@ namespace AssetManagement.Api.Controllers.AssetKinds
 
                 );
 
-            var result = await _sender.Send(command, cancellationToken);
+            var result = await sender.Send(command, cancellationToken);
 
             if (result.IsFailure)
             {

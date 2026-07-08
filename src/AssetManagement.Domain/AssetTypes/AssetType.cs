@@ -1,5 +1,6 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetTypes.Events;
+using AssetManagement.Domain.Manufacturers.Events;
 using AssetManagement.Domain.Shared;
 
 namespace AssetManagement.Domain.AssetTypes;
@@ -96,47 +97,54 @@ public sealed class AssetType : Entity
         RaiseDomainEvent(
             new AssetTypeUpdatedDomainEvent(Id, Requestable));
     }
+    public void ChangeRequestable(Requestable requestable)
+    {
+        Requestable = requestable;
 
-    //public void UpdateDetails(
-    //    Name name,
-    //    Description description)
-    //{
-    //    Name = name;
-    //    Description = description;
+        RaiseDomainEvent(
+            new AssetTypeUpdatedDomainEvent(Id, Requestable));
+    }
 
-    //    RaiseDomainEvent(
-    //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
-    //}
+        //public void UpdateDetails(
+        //    Name name,
+        //    Description description)
+        //{
+        //    Name = name;
+        //    Description = description;
 
-    //public void UpdateDepreciation(
-    //    DepreciationValue? value,
-    //    DepreciationPeriod? period)
-    //{
-    //    DepreciationValue = value;
-    //    DepreciationPeriod = period;
+        //    RaiseDomainEvent(
+        //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
+        //}
 
-    //    RaiseDomainEvent(
-    //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
-    //}
+        //public void UpdateDepreciation(
+        //    DepreciationValue? value,
+        //    DepreciationPeriod? period)
+        //{
+        //    DepreciationValue = value;
+        //    DepreciationPeriod = period;
 
-    //public void UpdateMetadata(
-    //    DataSource? dataSource,
-    //    JiraId? jiraId,
-    //    PrefixName? prefixName,
-    //    SecuritySensitive? securitySensitive,
-    //    MobileEquipment? mobileEquipment,
-    //    int modelId,
-    //    int assetKindId)
-    //{
-    //    DataSource = dataSource;
-    //    JiraId = jiraId;
-    //    PrefixName = prefixName;
-    //    SecuritySensitive = securitySensitive;
-    //    MobileEquipment = mobileEquipment;
-    //    ModelId = modelId;
-    //    AssetKindId = assetKindId;
+        //    RaiseDomainEvent(
+        //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
+        //}
 
-    //    RaiseDomainEvent(
-    //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
-    //}
-}
+        //public void UpdateMetadata(
+        //    DataSource? dataSource,
+        //    JiraId? jiraId,
+        //    PrefixName? prefixName,
+        //    SecuritySensitive? securitySensitive,
+        //    MobileEquipment? mobileEquipment,
+        //    int modelId,
+        //    int assetKindId)
+        //{
+        //    DataSource = dataSource;
+        //    JiraId = jiraId;
+        //    PrefixName = prefixName;
+        //    SecuritySensitive = securitySensitive;
+        //    MobileEquipment = mobileEquipment;
+        //    ModelId = modelId;
+        //    AssetKindId = assetKindId;
+
+        //    RaiseDomainEvent(
+        //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
+        //}
+    }
