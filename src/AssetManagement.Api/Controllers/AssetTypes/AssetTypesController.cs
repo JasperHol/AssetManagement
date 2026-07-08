@@ -27,7 +27,7 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         /// <remarks>
         /// Lijst van alle AssetTypes ophalen.
         /// </remarks>
-        [HttpGet("all_AssetTypes")]
+        [HttpGet("all_assetTypes")]
         public async Task<IActionResult> SearchAssetTypes(CancellationToken cancellationToken)
         {
             var query = new SearchAssetTypesQuery();
@@ -44,7 +44,7 @@ namespace AssetManagement.Api.Controllers.AssetTypes
         /// <remarks>
         /// Nieuwe AssetType toevoegen.
         /// </remarks>
-        [HttpPost("AssetType_create")]
+        [HttpPost("assetType_create")]
         public async Task<IActionResult> CreateAssetType(
             CreateAssetTypeRequest request,
             CancellationToken cancellationToken)

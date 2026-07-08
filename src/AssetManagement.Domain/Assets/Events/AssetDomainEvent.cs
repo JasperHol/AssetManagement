@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Domain.AssetTypes;
-
-//public record ModelId(int Value);
+namespace AssetManagement.Domain.Assets.Events
+{
+    internal class AssetDomainEvent
+    {
+    }
+}

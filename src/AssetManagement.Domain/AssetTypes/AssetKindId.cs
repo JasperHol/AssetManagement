@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.AssetTypes;
 
-public record AssetKindId(int Value);
+//public record AssetKindId(int Value);
 

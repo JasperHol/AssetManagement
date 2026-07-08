@@ -1,26 +1,20 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
-using AssetManagement.Application.AssetTypes.UpdateAssetType;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetTypes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AssetManagement.Application.AssetTypes.UpdateAssetType;
 
 internal sealed class UpdateAssetTypeCommandHandler
     : ICommandHandler<UpdateAssetTypeCommand, int>
 {
-    private readonly IAssetTypeRepository _AssetTypeRepository;
+    private readonly IAssetTypeRepository _assetTypeRepository;
     private readonly IUnitOfWork _unitOfWork;
 
     public UpdateAssetTypeCommandHandler(
-        IAssetTypeRepository AssetTypeRepository,
+        IAssetTypeRepository assetTypeRepository,
         IUnitOfWork unitOfWork)
     {
-        _AssetTypeRepository = AssetTypeRepository;
+        _assetTypeRepository = assetTypeRepository;
         _unitOfWork = unitOfWork;
     }
 
@@ -28,10 +22,10 @@ internal sealed class UpdateAssetTypeCommandHandler
     UpdateAssetTypeCommand request,
     CancellationToken cancellationToken)
     {
-        var AssetType = await _AssetTypeRepository
+        var assetType = await _assetTypeRepository
             .GetByIdAsync(request.Id, cancellationToken);
 
-        if (AssetType is null)
+        if (assetType is null)
         {
             return Result.Failure<int>(
                 Error.NotFound(
@@ -39,13 +33,13 @@ internal sealed class UpdateAssetTypeCommandHandler
                     $"AssetType with id {request.Id} was not found"));
         }
 
-        AssetType.ToggleRequestable();
+        assetType.ToggleRequestable();
 
         // Optional: only needed if entity is detached
         //_AssetTypeRepository.Update(AssetType);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return Result.Success(AssetType.Id);
+        return Result.Success(assetType.Id);
     }
 }

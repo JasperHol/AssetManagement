@@ -46,6 +46,6 @@ internal sealed class UpdateAssetKindCommandHandler
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return Result.Success(model.Id.Value);
+        return Result.Success(model.Id);
     }
 }

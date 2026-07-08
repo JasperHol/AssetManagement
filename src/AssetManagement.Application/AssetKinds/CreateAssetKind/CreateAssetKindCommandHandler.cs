@@ -37,6 +37,6 @@ internal sealed class CreateAssetKindCommandHandler
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return Result.Success(assetKind.Id.Value);
+        return Result.Success(assetKind.Id);
     }
 }

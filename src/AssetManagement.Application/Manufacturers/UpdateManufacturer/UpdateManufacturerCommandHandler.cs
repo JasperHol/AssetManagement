@@ -46,6 +46,6 @@ internal sealed class UpdateManufacturerCommandHandler
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return Result.Success(manufacturer.Id.Value);
+        return Result.Success(manufacturer.Id);
     }
 }

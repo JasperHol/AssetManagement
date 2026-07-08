@@ -6,8 +6,8 @@ public interface IAssetTypeRepository
 {
     Task<AssetType?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    void Add(AssetType AssetType);
+    void Add(AssetType assetType);
 
-    AssetType Update(AssetType AssetType);
+    AssetType Update(AssetType assetType);
 
 }

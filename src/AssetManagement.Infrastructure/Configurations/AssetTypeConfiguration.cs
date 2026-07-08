@@ -43,6 +43,7 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
                .HasDefaultValueSql("1") // 👉 SQL literal, not CLR bool
                .IsRequired();
 
+
         //DepreciationValue
         builder.Property(depreciationValue => depreciationValue.DepreciationValue)
                 .HasConversion(
@@ -92,17 +93,17 @@ internal sealed class AssetTypeConfiguration : IEntityTypeConfiguration<AssetTyp
 
 
 
-        builder.Property(assetType => assetType.ModelId)
-        .HasConversion(
-            id => id.Value,
-            value => new ModelId(value))
-        .IsRequired(true);
+        //builder.Property(assetType => assetType.ModelId)
+        //.HasConversion(
+        //    id => id.Value,
+        //    value => new ModelId(value))
+        //.IsRequired(true);
 
-        builder.Property(assetType => assetType.AssetKindId)
-        .HasConversion(
-            id => id.Value,
-            value => new AssetKindId(value))
-        .IsRequired(true);
+        //builder.Property(assetType => assetType.AssetKindId)
+        //.HasConversion(
+        //    id => id.Value,
+        //    value => new AssetKindId(value))
+        //.IsRequired(true);
 
         builder
                 .HasOne<Model>()

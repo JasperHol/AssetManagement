@@ -17,8 +17,8 @@ public sealed class AssetType : Entity
         PrefixName? prefixName,
         SecuritySensitive? securitySensitive,
         MobileEquipment? mobileEquipment,
-        ModelId? modelId,
-        AssetKindId? assetKindId)
+        int modelId,
+        int assetKindId)
     {
         Name = name;
         Description = description;
@@ -48,8 +48,8 @@ public sealed class AssetType : Entity
     public PrefixName? PrefixName { get; private set; }
     public SecuritySensitive? SecuritySensitive { get; private set; }
     public MobileEquipment? MobileEquipment { get; private set; }
-    public ModelId? ModelId { get; private set; }
-    public AssetKindId? AssetKindId { get; private set; }
+    public int ModelId { get; private set; }
+    public int AssetKindId { get; private set; }
 
     public static AssetType Create(
         Name name,
@@ -62,8 +62,8 @@ public sealed class AssetType : Entity
         PrefixName? prefixName = null,
         SecuritySensitive? securitySensitive = null,
         MobileEquipment? mobileEquipment = null,
-        ModelId? modelId = null,
-        AssetKindId? assetKindId = null)
+        int modelId = 0,
+        int assetKindId = 0)
     {
         var assetType = new AssetType(
             name,
@@ -97,46 +97,46 @@ public sealed class AssetType : Entity
             new AssetTypeUpdatedDomainEvent(Id, Requestable));
     }
 
-    public void UpdateDetails(
-        Name name,
-        Description description)
-    {
-        Name = name;
-        Description = description;
+    //public void UpdateDetails(
+    //    Name name,
+    //    Description description)
+    //{
+    //    Name = name;
+    //    Description = description;
 
-        RaiseDomainEvent(
-            new AssetTypeUpdatedDomainEvent(Id, Requestable));
-    }
+    //    RaiseDomainEvent(
+    //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
+    //}
 
-    public void UpdateDepreciation(
-        DepreciationValue? value,
-        DepreciationPeriod? period)
-    {
-        DepreciationValue = value;
-        DepreciationPeriod = period;
+    //public void UpdateDepreciation(
+    //    DepreciationValue? value,
+    //    DepreciationPeriod? period)
+    //{
+    //    DepreciationValue = value;
+    //    DepreciationPeriod = period;
 
-        RaiseDomainEvent(
-            new AssetTypeUpdatedDomainEvent(Id, Requestable));
-    }
+    //    RaiseDomainEvent(
+    //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
+    //}
 
-    public void UpdateMetadata(
-        DataSource? dataSource,
-        JiraId? jiraId,
-        PrefixName? prefixName,
-        SecuritySensitive? securitySensitive,
-        MobileEquipment? mobileEquipment,
-        ModelId? modelId,
-        AssetKindId? assetKindId)
-    {
-        DataSource = dataSource;
-        JiraId = jiraId;
-        PrefixName = prefixName;
-        SecuritySensitive = securitySensitive;
-        MobileEquipment = mobileEquipment;
-        ModelId = modelId;
-        AssetKindId = assetKindId;
+    //public void UpdateMetadata(
+    //    DataSource? dataSource,
+    //    JiraId? jiraId,
+    //    PrefixName? prefixName,
+    //    SecuritySensitive? securitySensitive,
+    //    MobileEquipment? mobileEquipment,
+    //    int modelId,
+    //    int assetKindId)
+    //{
+    //    DataSource = dataSource;
+    //    JiraId = jiraId;
+    //    PrefixName = prefixName;
+    //    SecuritySensitive = securitySensitive;
+    //    MobileEquipment = mobileEquipment;
+    //    ModelId = modelId;
+    //    AssetKindId = assetKindId;
 
-        RaiseDomainEvent(
-            new AssetTypeUpdatedDomainEvent(Id, Requestable));
-    }
+    //    RaiseDomainEvent(
+    //        new AssetTypeUpdatedDomainEvent(Id, Requestable));
+    //}
 }

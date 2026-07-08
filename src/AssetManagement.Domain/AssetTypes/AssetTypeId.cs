@@ -6,4 +6,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.AssetTypes;
 
-//public record ModelId(int Value);
+//public record AssetTypeId(int Value);

@@ -15,7 +15,7 @@ public sealed class Model : Entity
         Name name,
         Description description,
         Requestable requestable,
-        ManufacturerId manufacturerId)
+        int manufacturerId)
     {
         Name = name;
         Description = description;
@@ -27,16 +27,16 @@ public sealed class Model : Entity
     private Model()
     {
     }
-    public AssetManagement.Domain.AssetTypes.ModelId Id { get; private set; }
+    public int Id { get; private set; }
     public Name Name { get; private set; }
     public Description Description { get; private set; }
     public Requestable Requestable { get; private set; }
-    public ManufacturerId ManufacturerId { get; private set; }
+    public int ManufacturerId { get; private set; }
 
     public static Model Create(
         Name name,
         Description description,
-        ManufacturerId manufacturerId,
+        int manufacturerId,
         Requestable? requestable = null)
 
     {
@@ -59,7 +59,7 @@ public sealed class Model : Entity
     {
         Requestable = Requestable.Toggle();
 
-        RaiseDomainEvent(new ModelUpdatedDomainEvent(Id.Value, Requestable));
+        RaiseDomainEvent(new ModelUpdatedDomainEvent(Id, Requestable));
     }
 
 

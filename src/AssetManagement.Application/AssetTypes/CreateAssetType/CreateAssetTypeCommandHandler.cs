@@ -38,8 +38,8 @@ internal sealed class CreateAssetTypeCommandHandler
             new PrefixName(request.PrefixName),
             new SecuritySensitive(request.SecuritySensitive),
             new MobileEquipment(request.MobileEquipment),
-            new ModelId(request.ModelId),
-            new AssetKindId(request.AssetKindId)
+            request.ModelId,
+            request.AssetKindId
 
 
         // Requestable defaults to true

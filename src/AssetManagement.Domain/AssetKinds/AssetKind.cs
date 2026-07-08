@@ -24,7 +24,7 @@ public sealed class AssetKind : Entity
     }
 
    
-    public AssetManagement.Domain.AssetTypes.AssetKindId Id { get; private set; }
+    public int Id { get; private set; }
     public Name Name { get; private set; }
     public HasMacAddress HasMacAddress { get; private set; } = default!;
     public IsPhysical IsPhysical { get; private set; } = default!;

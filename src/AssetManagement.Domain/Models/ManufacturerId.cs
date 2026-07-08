@@ -6,4 +6,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.Models;
 
-public sealed record ManufacturerId(int Value);
+//public sealed record ManufacturerId(int Value);

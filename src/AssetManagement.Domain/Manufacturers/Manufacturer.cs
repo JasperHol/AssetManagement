@@ -20,7 +20,7 @@ public sealed class Manufacturer : Entity
     private Manufacturer()
     {
     }
-    public AssetManagement.Domain.Models.ManufacturerId Id { get; private set; }
+    public int Id { get; private set; }
     public Name Name { get; private set; }
     public Description Description { get; private set; }
     public Requestable Requestable { get; private set; }

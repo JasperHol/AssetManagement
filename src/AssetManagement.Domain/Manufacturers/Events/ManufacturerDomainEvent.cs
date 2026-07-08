@@ -10,4 +10,4 @@ using System.Threading.Tasks;
 namespace AssetManagement.Domain.Manufacturers.Events;
 
 public sealed record ManufacturerCreatedDomainEvent(Name Name, Description Description, Requestable Requestable) : IDomainEvent;
-public sealed record ManufacturerUpdatedDomainEvent(ManufacturerId Id, Requestable Requestable) : IDomainEvent;
+public sealed record ManufacturerUpdatedDomainEvent(int Id, Requestable Requestable) : IDomainEvent;

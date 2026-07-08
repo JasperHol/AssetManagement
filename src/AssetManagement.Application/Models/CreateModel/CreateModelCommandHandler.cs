@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.CreateModel;
@@ -29,7 +30,7 @@ internal sealed class CreateAssetKindCommandHandler
         var model = Model.Create(
             new Name(request.Name),
             new Description(request.Description),
-            new ManufacturerId(request.ManufacturerId)
+            request.ManufacturerId
         // Requestable defaults to true
         );
 
@@ -37,6 +38,6 @@ internal sealed class CreateAssetKindCommandHandler
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return Result.Success(model.Id.Value);
+        return Result.Success(model.Id);
     }
 }

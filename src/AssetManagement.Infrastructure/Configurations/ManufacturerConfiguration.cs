@@ -15,11 +15,11 @@ internal sealed class ManufacturerConfiguration : IEntityTypeConfiguration<Manuf
     {
         builder.ToTable("Manufacturers");
 
-        builder.Property(manufacturer => manufacturer.Id)
-                .HasConversion(
-                id => id.Value,
-                value => new AssetManagement.Domain.Models.ManufacturerId(value))
-                .ValueGeneratedOnAdd();
+        //builder.Property(manufacturer => manufacturer.Id)
+        //        .HasConversion(
+        //        id => id.Value,
+        //        value => new AssetManagement.Domain.Models.ManufacturerId(value))
+        //        .ValueGeneratedOnAdd();
 
         builder.HasKey(manufacturer => manufacturer.Id);
 
