@@ -6,7 +6,7 @@ namespace AssetManagement.Domain.AssetKinds;
 
 public sealed class AssetKind : Entity
 {
-    //public object AssetKindId;
+    
 
     private AssetKind(
         Name name,
@@ -25,7 +25,7 @@ public sealed class AssetKind : Entity
 
    
     public int Id { get; private set; }
-    public Name Name { get; private set; }
+    public Name Name { get; private set; } 
     public HasMacAddress HasMacAddress { get; private set; } = default!;
     public IsPhysical IsPhysical { get; private set; } = default!;
 

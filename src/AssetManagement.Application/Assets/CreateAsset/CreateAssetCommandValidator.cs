@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.AssetKinds.CreateAssetKind;
+namespace AssetManagement.Application.Assets.CreateAsset;
 
 public sealed class CreateAssetCommandValidator
     : AbstractValidator<CreateAssetCommand>

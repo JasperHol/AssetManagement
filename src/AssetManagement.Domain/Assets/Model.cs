@@ -1,3 +1,3 @@
 ﻿namespace AssetManagement.Domain.Assets;
 
-public record Model(int Value);
+public record Model(string Value);

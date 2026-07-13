@@ -11,8 +11,8 @@ public interface IAssetKindRepository
 {
     Task<AssetKind?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    void Add(AssetKind AssetKind);
+    void Add(AssetKind assetKind);
 
-    AssetKind Update(AssetKind AssetKind);
+    AssetKind Update(AssetKind assetKind);
 
 }

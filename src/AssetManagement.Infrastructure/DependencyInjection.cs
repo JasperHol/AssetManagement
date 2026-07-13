@@ -6,6 +6,7 @@ using AssetManagement.Domain.AssetKinds;
 using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
+using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -44,6 +45,8 @@ public static class DependencyInjection
         services.AddScoped<IAssetTypeRepository, AssetTypeRepository>();
         
         services.AddScoped<IAssetKindRepository, AssetKindRepository>();
+
+        services.AddScoped<IAssetRepository, AssetRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
