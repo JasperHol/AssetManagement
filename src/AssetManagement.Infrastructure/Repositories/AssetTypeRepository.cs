@@ -8,13 +8,9 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Infrastructure.Repositories;
 
-internal sealed class AssetTypeRepository : Repository<AssetType>, IAssetTypeRepository
+internal sealed class AssetTypeRepository(ApplicationDbContext dbContext) : Repository<AssetType>(dbContext), IAssetTypeRepository
 
 {
-    public AssetTypeRepository(ApplicationDbContext dbContext) : base(dbContext)
-    {
-
-    }
     public AssetType Update(AssetType assetType)
     {
         DbContext.Set<AssetType>().Update(assetType);

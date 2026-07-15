@@ -24,8 +24,8 @@ internal sealed class AssetConfiguration : IEntityTypeConfiguration<Asset>
         builder.Property(asset => asset.Name)
                 .HasMaxLength(200)
                 .HasConversion<string>(
-                    (Name name) => name.Value,
-                    (string value) => new Name(value));
+                    name => name.Value,
+                    value => new Name(value));
 
         builder.Property(asset => asset.Brand)
                .HasMaxLength(200)

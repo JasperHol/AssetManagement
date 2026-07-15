@@ -132,15 +132,15 @@ public sealed class Asset : Entity
                  Asset.LostDate,
                  Asset.DisposedDate,
                  Asset.CmdbLabel,
-                 Asset.DepreciationDate
+                 Asset.DepreciationDate,
+                 Asset.MsLicenceMappingId,
+                 Asset.StatusId,
+                 Asset.AssetTypeId
                  ));
 
 
         return Asset;
     }
 
-    public static Asset Create(Name name)
-    {
-        throw new NotImplementedException();
-    }
+   
 }

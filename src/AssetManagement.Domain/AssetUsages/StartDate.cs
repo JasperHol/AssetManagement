@@ -4,6 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Domain.Models;
+namespace AssetManagement.Domain.AssetUsages;
 
-//public sealed record ManufacturerId(int Value);
+public record StartDate(DateTime Value);

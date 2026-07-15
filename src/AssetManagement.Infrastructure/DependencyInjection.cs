@@ -7,6 +7,7 @@ using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
 using AssetManagement.Domain.Assets;
+using AssetManagement.Domain.StatusTransitions;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -47,6 +48,8 @@ public static class DependencyInjection
         services.AddScoped<IAssetKindRepository, AssetKindRepository>();
 
         services.AddScoped<IAssetRepository, AssetRepository>();
+
+        services.AddScoped<IStatusTransitionRepository, StatusTransitionRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 

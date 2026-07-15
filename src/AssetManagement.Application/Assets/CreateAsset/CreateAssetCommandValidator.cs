@@ -16,7 +16,15 @@ public sealed class CreateAssetCommandValidator
         RuleFor(c => c.Name)
             .NotEmpty();
 
-     
+        RuleFor(c => c.Brand)
+            .NotEmpty();
+
+        RuleFor(c => c.Model)
+            .NotEmpty();
+
+        RuleFor(c => c.SerialNumber)
+            .NotEmpty();
+
 
 
     }

@@ -5,23 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AssetManagement.Infrastructure;
 
-public sealed class ApplicationDbContext : DbContext, IUnitOfWork
+public sealed class ApplicationDbContext(DbContextOptions options, IPublisher publisher) : DbContext(options), IUnitOfWork
 {
-    private readonly IPublisher _publisher;
-
-    public ApplicationDbContext(DbContextOptions options, IPublisher publisher)
-        : base(options)
-    {
-        _publisher = publisher;
-    }
+    private readonly IPublisher _publisher = publisher;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         
         
-               
-        
-        
+            
+                
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 
         base.OnModelCreating(modelBuilder);

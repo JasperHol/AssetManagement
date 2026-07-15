@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Domain.AssetTypes;
+namespace AssetManagement.Domain.AssetUsages;
 
-//public record AssetTypeId(int Value);
+public record AgreemnentSignDate(DateTime Value);
+
