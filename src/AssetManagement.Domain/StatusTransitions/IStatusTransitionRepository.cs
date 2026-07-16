@@ -11,8 +11,8 @@ public interface IStatusTransitionRepository
 {
     Task<StatusTransition?> GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
-    void Add(StatusTransition model);
+    void Add(StatusTransition statusTransition);
 
-    StatusTransition Update(StatusTransition model);
+    StatusTransition Update(StatusTransition statusTransition);
 
 }

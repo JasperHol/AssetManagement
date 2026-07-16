@@ -8,6 +8,7 @@ using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
 using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.StatusTransitions;
+using AssetManagement.Domain.Statuses;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -17,6 +18,7 @@ using Dapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 
 namespace AssetManagement.Infrastructure;
 
@@ -50,6 +52,8 @@ public static class DependencyInjection
         services.AddScoped<IAssetRepository, AssetRepository>();
 
         services.AddScoped<IStatusTransitionRepository, StatusTransitionRepository>();
+
+        services.AddScoped<IStatusRepository, StatusRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 

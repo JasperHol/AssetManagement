@@ -1,4 +1,5 @@
-﻿using AssetManagement.Domain.StatusTransitions;
+﻿using AssetManagement.Domain.Statuses;
+using AssetManagement.Domain.StatusTransitions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -20,5 +21,17 @@ internal sealed class StatusTransitionConfiguration : IEntityTypeConfiguration<S
         builder.Property(statusTransition => statusTransition.Id)
                .ValueGeneratedOnAdd(); // 👈 tells EF this is IDENTITY
 
+
+        builder
+            .HasOne<Status>()
+            .WithMany()
+            .HasForeignKey(statusTransition => statusTransition.StatusFromId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder
+            .HasOne<Status>()
+            .WithMany()
+            .HasForeignKey(statusTransition => statusTransition.StatusToId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

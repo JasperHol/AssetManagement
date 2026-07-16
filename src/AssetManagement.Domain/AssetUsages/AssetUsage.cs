@@ -23,7 +23,7 @@ public sealed class AssetUsage : Entity
         AgreemnentSignDate agreemnentSignDate,
         AgreementDeclineDate agreementDeclineDate,
         AgreementDeclineReason agreementDeclineReason,
-        AgreementUsageAgreement agreementUsageAgreement,
+        byte[] agreementUsageAgreementImage,
         int assetId,
         int personId,
         int personAssetUsageId,
@@ -63,7 +63,8 @@ public sealed class AssetUsage : Entity
 
     public AgreementDeclineReason AgreementDeclineReason { get; private set; }
 
-    public AgreementUsageAgreement AgreementUsageAgreement { get; private set; }
+    //public AgreementUsageAgreement AgreementUsageAgreement { get; private set; }
+    public byte[] AgreementUsageAgreementImage { get; private set; }
 
     public int AssetId { get; private set; }
 

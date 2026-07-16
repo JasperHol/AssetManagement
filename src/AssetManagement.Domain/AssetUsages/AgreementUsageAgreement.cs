@@ -8,4 +8,4 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace AssetManagement.Domain.AssetUsages;
 
-public record AgreementUsageAgreement (string Value);
+//public record AgreementUsageAgreement (string Value);

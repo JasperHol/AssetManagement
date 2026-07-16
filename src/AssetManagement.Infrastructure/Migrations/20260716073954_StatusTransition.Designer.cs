@@ -4,6 +4,7 @@ using AssetManagement.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260716073954_StatusTransition")]
+    partial class StatusTransition
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -113,62 +116,6 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasIndex("ModelId");
 
                     b.ToTable("AssetTypes", (string)null);
-                });
-
-            modelBuilder.Entity("AssetManagement.Domain.AssetUsages.AssetUsage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("AgreementDeclineDate")
-                        .HasColumnType("date");
-
-                    b.Property<string>("AgreementDeclineReason")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<int>("AgreementStatus")
-                        .HasColumnType("int");
-
-                    b.Property<int>("AgreementStatusId")
-                        .HasColumnType("int");
-
-                    b.Property<byte[]>("AgreementUsageAgreementImage")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<DateTime>("AgreemnentSignDate")
-                        .HasColumnType("date");
-
-                    b.Property<int>("AssetId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DataSource")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("date");
-
-                    b.Property<int>("LocationId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PersonAssetUsageId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PersonId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("date");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AssetUsages", (string)null);
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.Assets.Asset", b =>
@@ -324,32 +271,7 @@ namespace AssetManagement.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("StatusFromId");
-
-                    b.HasIndex("StatusToId");
-
                     b.ToTable("StatusTransitions", (string)null);
-                });
-
-            modelBuilder.Entity("AssetManagement.Domain.Statuses.Status", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<int>("StatusTransitionId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Status", (string)null);
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.AssetTypes.AssetType", b =>
@@ -381,21 +303,6 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasOne("AssetManagement.Domain.Manufacturers.Manufacturer", null)
                         .WithMany()
                         .HasForeignKey("ManufacturerId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("AssetManagement.Domain.StatusTransitions.StatusTransition", b =>
-                {
-                    b.HasOne("AssetManagement.Domain.Statuses.Status", null)
-                        .WithMany()
-                        .HasForeignKey("StatusFromId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("AssetManagement.Domain.Statuses.Status", null)
-                        .WithMany()
-                        .HasForeignKey("StatusToId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });

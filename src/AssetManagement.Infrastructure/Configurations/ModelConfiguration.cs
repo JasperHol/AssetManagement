@@ -19,11 +19,6 @@ internal sealed class ModelConfiguration : IEntityTypeConfiguration<Model>
 
         builder.HasKey(model => model.Id);
 
-        //builder.Property(model => model.Id)
-        //    .HasConversion(
-        //        id => id.Value,
-        //        value => new ModelId(value))
-        //    .ValueGeneratedOnAdd();
 
         builder.Property(model => model.Id)
                .ValueGeneratedOnAdd(); // 👈 tells EF this is IDENTITY
@@ -44,11 +39,6 @@ internal sealed class ModelConfiguration : IEntityTypeConfiguration<Model>
                .HasDefaultValueSql("1") // 👈 SQL literal, not CLR bool
                .IsRequired();
 
-        //builder.Property(model => model.ManufacturerId)
-        //        .HasConversion(
-        //            id => id.Value,
-        //            value => new ManufacturerId(value))
-        //        .IsRequired();
 
         builder
                 .HasOne<Manufacturer>()
