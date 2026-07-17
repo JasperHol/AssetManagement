@@ -1,5 +1,4 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
-using AssetManagement.Application.AssetKinds.CreateAssetKind;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetKinds;
 using System;
@@ -10,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.AssetKinds.CreateAssetKind;
 
-internal sealed class CreateAssetCommandHandler
-    : ICommandHandler<CreateAssetCommand, int>
+internal sealed class CreateAssetKindCommandHandler
+    : ICommandHandler<CreateAssetKindCommand, int>
 {
     private readonly IAssetKindRepository _AssetKindRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public CreateAssetCommandHandler(
+    public CreateAssetKindCommandHandler(
         IAssetKindRepository AssetKindRepository,
         IUnitOfWork unitOfWork)
     {
@@ -24,7 +23,7 @@ internal sealed class CreateAssetCommandHandler
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<Result<int>> Handle(CreateAssetCommand request, CancellationToken cancellationToken)
+    public async Task<Result<int>> Handle(CreateAssetKindCommand request, CancellationToken cancellationToken)
     {
         var assetKind = AssetKind.Create(
             new Name(request.Name),

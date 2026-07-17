@@ -3,10 +3,12 @@ using AssetManagement.Application.Abstractions.Data;
 using AssetManagement.Application.Abstractions.Email;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.AssetKinds;
+using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.AssetTypes;
+using AssetManagement.Domain.AssetUsages;
 using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
-using AssetManagement.Domain.Assets;
+using AssetManagement.Domain.Statuses;
 using AssetManagement.Domain.StatusTransitions;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
@@ -49,7 +51,11 @@ public static class DependencyInjection
 
         services.AddScoped<IAssetRepository, AssetRepository>();
 
+        services.AddScoped<IAssetUsageRepository, AssetUsageRepository>();
+
         services.AddScoped<IStatusTransitionRepository, StatusTransitionRepository>();
+
+        services.AddScoped<IStatusRepository, StatusRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 

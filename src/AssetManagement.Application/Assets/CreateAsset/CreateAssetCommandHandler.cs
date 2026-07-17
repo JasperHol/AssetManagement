@@ -21,36 +21,7 @@ internal sealed class CreateAssetCommandHandler(
 
     public async Task<Result<int>> Handle(CreateAssetCommand request, CancellationToken cancellationToken)
     {
-        //var asset = Asset.Create(
-        //    new Name(request.Name),
-        //    new Brand(request.Brand),
-        //    new Model(request.Model),
-        //    new SerialNumber(request.SerialNumber),
-        //    new MacAddress(request.MacAddress),
-        //    new ServiceTag(request.ServiceTag),
-        //    new PurchaseDate(request.PurchaseDate),
-        //    new OrderNumber(request.OrderNumber),
-        //    new LostDate(request.LostDate),
-        //    new DisposedDate(request.DisposedDate),
-        //    new CmdbLabel(request.CmdbLabel),
-        //    new DepreciationDate(request.DepreciationDate),
-        //    request.msLicenceMappingId,
-        //    request.statusId,
-        //    request.assetTypeId);
-        //var asset = Asset.Create(
-        //    new Name(request.Name),
-        //    new Brand(request.Brand),
-        //    new Model(request.Model),
-        //    new SerialNumber(request.SerialNumber),
-        //    new MacAddress(request.MacAddress),
-        //    new ServiceTag(request.ServiceTag),
-        //    new PurchaseDate(request.PurchaseDate),
-        //    new OrderNumber(request.OrderNumber),
-        //    new LostDate(DateTime.MinValue),
-        //    new DisposedDate(DateTime.MinValue),
-        //    new CmdbLabel(request.CmdbLabel),
-        //    new DepreciationDate(request.DepreciationDate),
-        //    0,0,0);
+        
 
         var asset = Asset.Create(
         new Name(request.Name),

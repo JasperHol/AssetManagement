@@ -6,11 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="AssetUsages\**" />
-    <EmbeddedResource Remove="AssetUsages\**" />
-    <None Remove="AssetUsages\**" />
-  </ItemGroup>
+ 
 
   <ItemGroup>
     <PackageReference Include="MediatR.Contracts" Version="2.0.1" />

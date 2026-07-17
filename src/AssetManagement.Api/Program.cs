@@ -1,3 +1,4 @@
+using AssetManagement.Api;
 using AssetManagement.Api.Extensions;
 using AssetManagement.Application;
 using AssetManagement.Domain;
@@ -60,6 +61,15 @@ if (app.Environment.IsDevelopment())
     // REMARK: Uncomment if you want to seed initial data.
     //app.SeedData();
 }
+
+//using (var scope = app.Services.CreateScope())
+//{
+//    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+//    await db.Database.MigrateAsync();
+
+//    await DatabaseSeeder.SeedStatusesAsync(app.Services);
+//}
 
 app.UseHttpsRedirection();
 

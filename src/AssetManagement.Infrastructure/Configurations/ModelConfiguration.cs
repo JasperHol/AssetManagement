@@ -19,11 +19,6 @@ internal sealed class ModelConfiguration : IEntityTypeConfiguration<Model>
 
         builder.HasKey(model => model.Id);
 
-        //builder.Property(model => model.Id)
-        //    .HasConversion(
-        //        id => id.Value,
-        //        value => new ModelId(value))
-        //    .ValueGeneratedOnAdd();
 
         builder.Property(model => model.Id)
                .ValueGeneratedOnAdd(); // 👈 tells EF this is IDENTITY

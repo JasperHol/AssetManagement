@@ -42,7 +42,7 @@ namespace AssetManagement.Api.Controllers.AssetKinds
             CreateAssetKindRequest request,
             CancellationToken cancellationToken)
         {
-            var command = new CreateAssetCommand(
+            var command = new CreateAssetKindCommand(
                 request.Name,
                 request.HasMacAddress,
                 request.IsPhysical

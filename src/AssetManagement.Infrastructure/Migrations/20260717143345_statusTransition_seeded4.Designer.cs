@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260709151318_Asset")]
-    partial class Asset
+    [Migration("20260717143345_statusTransition_seeded4")]
+    partial class statusTransition_seeded4
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -253,6 +253,218 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("Models", (string)null);
+                });
+
+            modelBuilder.Entity("AssetManagement.Domain.StatusTransitions.StatusTransition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("StatusFromId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StatusToId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StatusTransitions", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            StatusFromId = 1,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 2,
+                            StatusFromId = 1,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            StatusFromId = 2,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            StatusFromId = 2,
+                            StatusToId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            StatusFromId = 2,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 6,
+                            StatusFromId = 2,
+                            StatusToId = 5
+                        },
+                        new
+                        {
+                            Id = 7,
+                            StatusFromId = 3,
+                            StatusToId = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            StatusFromId = 3,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 9,
+                            StatusFromId = 3,
+                            StatusToId = 4
+                        },
+                        new
+                        {
+                            Id = 10,
+                            StatusFromId = 4,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 11,
+                            StatusFromId = 4,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 12,
+                            StatusFromId = 4,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 13,
+                            StatusFromId = 5,
+                            StatusToId = 8
+                        },
+                        new
+                        {
+                            Id = 14,
+                            StatusFromId = 5,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 15,
+                            StatusFromId = 5,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 16,
+                            StatusFromId = 5,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 17,
+                            StatusFromId = 6,
+                            StatusToId = 7
+                        },
+                        new
+                        {
+                            Id = 18,
+                            StatusFromId = 6,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 19,
+                            StatusFromId = 6,
+                            StatusToId = 4
+                        },
+                        new
+                        {
+                            Id = 20,
+                            StatusFromId = 6,
+                            StatusToId = 5
+                        });
+                });
+
+            modelBuilder.Entity("AssetManagement.Domain.Statuses.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("StatusTransitionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Statuses", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "CreateAsset",
+                            StatusTransitionId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Stock",
+                            StatusTransitionId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "InUse",
+                            StatusTransitionId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "AssetInServiceRepair",
+                            StatusTransitionId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "ReportedStolenMissing",
+                            StatusTransitionId = 5
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "ObsoleteAsset",
+                            StatusTransitionId = 6
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "AssetDisposed",
+                            StatusTransitionId = 7
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "AssetLost",
+                            StatusTransitionId = 8
+                        });
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.AssetTypes.AssetType", b =>

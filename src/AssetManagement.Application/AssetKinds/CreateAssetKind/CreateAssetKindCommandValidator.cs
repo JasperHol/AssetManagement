@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace AssetManagement.Application.AssetKinds.CreateAssetKind;
 
 public sealed class CreateAssetCommandValidator
-    : AbstractValidator<CreateAssetCommand>
+    : AbstractValidator<CreateAssetKindCommand>
 {
     public CreateAssetCommandValidator()
     {

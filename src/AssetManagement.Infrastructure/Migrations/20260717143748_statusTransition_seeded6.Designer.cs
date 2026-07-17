@@ -4,6 +4,7 @@ using AssetManagement.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260717143748_statusTransition_seeded6")]
+    partial class statusTransition_seeded6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -269,6 +272,128 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("StatusTransitions", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            StatusFromId = 1,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 2,
+                            StatusFromId = 1,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            StatusFromId = 2,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            StatusFromId = 2,
+                            StatusToId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            StatusFromId = 2,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 6,
+                            StatusFromId = 2,
+                            StatusToId = 5
+                        },
+                        new
+                        {
+                            Id = 7,
+                            StatusFromId = 3,
+                            StatusToId = 5
+                        },
+                        new
+                        {
+                            Id = 8,
+                            StatusFromId = 3,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 9,
+                            StatusFromId = 3,
+                            StatusToId = 4
+                        },
+                        new
+                        {
+                            Id = 10,
+                            StatusFromId = 4,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 11,
+                            StatusFromId = 4,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 12,
+                            StatusFromId = 4,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 13,
+                            StatusFromId = 5,
+                            StatusToId = 8
+                        },
+                        new
+                        {
+                            Id = 14,
+                            StatusFromId = 5,
+                            StatusToId = 6
+                        },
+                        new
+                        {
+                            Id = 15,
+                            StatusFromId = 5,
+                            StatusToId = 3
+                        },
+                        new
+                        {
+                            Id = 16,
+                            StatusFromId = 5,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 17,
+                            StatusFromId = 6,
+                            StatusToId = 7
+                        },
+                        new
+                        {
+                            Id = 18,
+                            StatusFromId = 6,
+                            StatusToId = 2
+                        },
+                        new
+                        {
+                            Id = 19,
+                            StatusFromId = 6,
+                            StatusToId = 4
+                        },
+                        new
+                        {
+                            Id = 20,
+                            StatusFromId = 6,
+                            StatusToId = 5
+                        });
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.Statuses.Status", b =>
