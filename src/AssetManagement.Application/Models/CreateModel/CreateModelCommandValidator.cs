@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.CreateModel;
 
-public sealed class CreateAssetKindCommandValidator
+public sealed class CreateModelCommandValidator
     : AbstractValidator<CreateModelCommand>
 {
-    public CreateAssetKindCommandValidator()
+    public CreateModelCommandValidator()
     {
         RuleFor(c => c.Name)
             .NotEmpty();

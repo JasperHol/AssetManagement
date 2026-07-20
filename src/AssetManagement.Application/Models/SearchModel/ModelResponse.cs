@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.Models.SearchModel;
 
-public sealed class AssetKindResponse
+public sealed class ModelResponse
 {
     public int Id { get; init; }
 
