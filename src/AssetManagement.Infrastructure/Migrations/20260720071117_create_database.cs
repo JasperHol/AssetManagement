@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AssetManagement.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class _11 : Migration
+    public partial class create_database : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -160,6 +160,33 @@ namespace AssetManagement.Infrastructure.Migrations
                         principalTable: "Models",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "StatusTransitions",
+                columns: new[] { "Id", "StatusFromId", "StatusToId" },
+                values: new object[,]
+                {
+                    { 1, 1, 6 },
+                    { 2, 1, 3 },
+                    { 3, 2, 3 },
+                    { 4, 2, 4 },
+                    { 5, 2, 6 },
+                    { 6, 2, 5 },
+                    { 7, 3, 5 },
+                    { 8, 3, 2 },
+                    { 9, 3, 4 },
+                    { 10, 4, 6 },
+                    { 11, 4, 2 },
+                    { 12, 4, 3 },
+                    { 13, 5, 8 },
+                    { 14, 5, 6 },
+                    { 15, 5, 3 },
+                    { 16, 5, 2 },
+                    { 17, 6, 7 },
+                    { 18, 6, 2 },
+                    { 19, 6, 4 },
+                    { 20, 6, 5 }
                 });
 
             migrationBuilder.InsertData(
