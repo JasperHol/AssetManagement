@@ -18,8 +18,8 @@ public class AuditingController(ISender sender) : ControllerBase
     /// <remarks>
     /// Lijst van alle Auditing ophalen.
     /// </remarks>
-    [HttpGet("all_Auditing")]
-    public async Task<IActionResult> SearchAssets(CancellationToken cancellationToken)
+    [HttpGet("all_auditing")]
+    public async Task<IActionResult> SearchAuditing(CancellationToken cancellationToken)
     {
         var query = new SearchAuditingQuery();
 
