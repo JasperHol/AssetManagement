@@ -13,8 +13,8 @@ public sealed class EndAssetUsageCommandValidator
 {
     public EndAssetUsageCommandValidator()
     {
-       // RuleFor(c => c.Requestable)
-       //     .NotEmpty();
+        //RuleFor(c => c.EndDate)
+        //     .NotEmpty();
 
     }
 }

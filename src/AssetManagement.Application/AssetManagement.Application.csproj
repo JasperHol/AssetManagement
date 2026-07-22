@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <Folder Include="Assets\UpdateAsset\" />
+    <Folder Include="AssetUsages\DeclineAgreement\" />
+    <Folder Include="AssetUsages\SignAgreement\" />
   </ItemGroup>
 
 </Project>

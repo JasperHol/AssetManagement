@@ -4,6 +4,7 @@ using AssetManagement.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260722084335_AssetUsage_EndDate_Nullable")]
+    partial class AssetUsage_EndDate_Nullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,10 +126,11 @@ namespace AssetManagement.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime?>("AgreementDeclineDate")
+                    b.Property<DateTime>("AgreementDeclineDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AgreementDeclineReason")
+                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -134,9 +138,10 @@ namespace AssetManagement.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("AgreementUsageAgreement")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("AgreemnentSignDate")
+                    b.Property<DateTime>("AgreemnentSignDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("AssetId")

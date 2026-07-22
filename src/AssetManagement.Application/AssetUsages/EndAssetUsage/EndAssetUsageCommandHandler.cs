@@ -34,13 +34,18 @@ internal sealed class EndAssetUsageCommandHandler
                     $"AssetUsage with id {request.Id} was not found"));
         }
 
-
+        if (assetUsage.EndDate?.Value is DateTime endDate &&endDate != DateTime.MinValue)
+        {
+            return Result.Failure<int>(
+                Error.NotFound(
+                    "AssetUsage.AlreadyEnded",
+                    $"AssetUsage with id {request.Id} was already ended on date: {endDate:yyyy-MM-dd HH:mm:ss}"));
+        }
 
 
         assetUsage.End();
 
         
-
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return Result.Success(assetUsage.Id);

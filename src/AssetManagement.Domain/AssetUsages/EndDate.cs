@@ -6,4 +6,4 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.AssetUsages;
 
-public record EndDate(DateTime Value);
+public sealed record EndDate(DateTime? Value);

@@ -2,4 +2,4 @@
 
 namespace AssetManagement.Application.AssetUsages.EndAssetUsage;
 
-public record EndAssetUsageCommand(int Id, DateTime EndDate)   : ICommand<int>;
+public record EndAssetUsageCommand(int Id)   : ICommand<int>;

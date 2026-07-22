@@ -10,4 +10,7 @@ public record Error(string Code, string Name)
 
     public static Error NotFound(string code, string message) =>
         new(code, message);
+
+    public static Error Validation(string code, string message) =>
+        new(code, message);
 }

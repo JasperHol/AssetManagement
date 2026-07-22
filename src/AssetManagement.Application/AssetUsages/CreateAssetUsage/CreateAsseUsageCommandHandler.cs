@@ -26,19 +26,18 @@ internal sealed class CreateAssetUsageCommandHandler
     public async Task<Result<int>> Handle(CreateAssetUsageCommand request, CancellationToken cancellationToken)
     {
         var assetUsage = AssetUsage.Create(
-            new StartDate(request.StartDate),
-            new EndDate(request.EndDate),
-            new DataSource(request.DataSource),
-            request.AgreementStatus,
-            new AgreemnentSignDate(request.AgreemnentSignDate),
-            new AgreementDeclineDate(request.AgreementDeclineDate),
-            new AgreementDeclineReason(request.AgreementDeclineReason),
-            request.AgreementUsageAgreementImage,
             request.AssetId,
             request.PersonId,
-            request.PersonAssetUsageId,
             request.LocationId,
-            request.AgreementStatusId
+            request.AgreementStatusId,
+            new StartDate(DateTime.UtcNow),
+            null,                   // always empty on create
+            new DataSource(request.DataSource),
+            null,                   // always empty on create
+            null,                   // always empty on create
+            null,                   // always empty on create
+            null,                   // always empty on create
+            request.PersonAssetUsageId
 
         );
 

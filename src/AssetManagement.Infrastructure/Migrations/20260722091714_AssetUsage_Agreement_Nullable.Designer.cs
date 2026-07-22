@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260720134213_create_database")]
-    partial class create_database
+    [Migration("20260722091714_AssetUsage_Agreement_Nullable")]
+    partial class AssetUsage_Agreement_Nullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -116,6 +116,58 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasIndex("ModelId");
 
                     b.ToTable("AssetTypes", (string)null);
+                });
+
+            modelBuilder.Entity("AssetManagement.Domain.AssetUsages.AssetUsage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("AgreementDeclineDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AgreementDeclineReason")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("AgreementStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AgreementUsageAgreement")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("AgreemnentSignDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("AssetId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DataSource")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("LocationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersonAssetUsageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AssetsUsage", (string)null);
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.Assets.Asset", b =>
