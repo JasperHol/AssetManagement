@@ -10,6 +10,8 @@ using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
 using AssetManagement.Domain.Statuses;
 using AssetManagement.Domain.StatusTransitions;
+using AssetManagement.Domain.Locations;
+using AssetManagement.Domain.Persons;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -56,6 +58,10 @@ public static class DependencyInjection
         services.AddScoped<IStatusTransitionRepository, StatusTransitionRepository>();
 
         services.AddScoped<IStatusRepository, StatusRepository>();
+
+        services.AddScoped<IPersonRepository, PersonRepository>();
+
+        services.AddScoped<ILocationRepository, LocationRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
