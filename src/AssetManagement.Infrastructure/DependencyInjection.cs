@@ -21,6 +21,7 @@ using Dapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using AssetManagement.Domain.AgreementStatuses;
 
 namespace AssetManagement.Infrastructure;
 
@@ -42,6 +43,8 @@ public static class DependencyInjection
             options.UseSqlServer(connectionString));
 
         //services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<IAgreementStatusRepository, AgreementStatusRepository>();
 
         services.AddScoped<IManufacturerRepository, ManufacturerRepository>();
 

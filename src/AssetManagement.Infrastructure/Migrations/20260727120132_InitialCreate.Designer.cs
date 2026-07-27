@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AssetManagement.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260717143345_statusTransition_seeded4")]
-    partial class statusTransition_seeded4
+    [Migration("20260727120132_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,53 @@ namespace AssetManagement.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("AssetManagement.Domain.AgreementStatuses.AgreementStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsStartStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsStopStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AgreementStatuses", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            IsStartStatus = true,
+                            IsStopStatus = false,
+                            Name = "NotSignedYet"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            IsStartStatus = false,
+                            IsStopStatus = true,
+                            Name = "Signed"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IsStartStatus = false,
+                            IsStopStatus = true,
+                            Name = "Declined"
+                        });
+                });
 
             modelBuilder.Entity("AssetManagement.Domain.AssetKinds.AssetKind", b =>
                 {
@@ -118,6 +165,66 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.ToTable("AssetTypes", (string)null);
                 });
 
+            modelBuilder.Entity("AssetManagement.Domain.AssetUsages.AssetUsage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("AgreementDeclineDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("AgreementDeclineReason")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("AgreementSignDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("AgreementStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AgreementUsageAgreementImage")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("AssetId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DataSource")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("LocationId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AgreementStatusId");
+
+                    b.HasIndex("AssetId");
+
+                    b.HasIndex("LocationId");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("AssetUsages", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_AssetUsage_PersonOrLocation", "(PersonId IS NOT NULL AND LocationId IS NULL)\r\n          OR\r\n          (PersonId IS NULL AND LocationId IS NOT NULL)");
+                        });
+                });
+
             modelBuilder.Entity("AssetManagement.Domain.Assets.Asset", b =>
                 {
                     b.Property<int>("Id")
@@ -194,6 +301,43 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.ToTable("Assets", (string)null);
                 });
 
+            modelBuilder.Entity("AssetManagement.Domain.Locations.Location", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BuildingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Remark")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<int>("ReportingUnitId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Requestable")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("1");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Locations", (string)null);
+                });
+
             modelBuilder.Entity("AssetManagement.Domain.Manufacturers.Manufacturer", b =>
                 {
                     b.Property<int>("Id")
@@ -253,6 +397,57 @@ namespace AssetManagement.Infrastructure.Migrations
                     b.HasIndex("ManufacturerId");
 
                     b.ToTable("Models", (string)null);
+                });
+
+            modelBuilder.Entity("AssetManagement.Domain.Persons.Person", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AccountName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("DataSource")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("EmloyeeNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("Requestable")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("1");
+
+                    b.Property<string>("Sid")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<int>("WorksForId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Persons", (string)null);
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.StatusTransitions.StatusTransition", b =>
@@ -467,6 +662,45 @@ namespace AssetManagement.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("AssetManagement.Infrastructure.Auditing.AuditLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("ChangedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ChangedBy")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Changes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EntityId")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("EntityName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AuditLogs", (string)null);
+                });
+
             modelBuilder.Entity("AssetManagement.Domain.AssetTypes.AssetType", b =>
                 {
                     b.HasOne("AssetManagement.Domain.AssetKinds.AssetKind", null)
@@ -480,6 +714,31 @@ namespace AssetManagement.Infrastructure.Migrations
                         .HasForeignKey("ModelId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("AssetManagement.Domain.AssetUsages.AssetUsage", b =>
+                {
+                    b.HasOne("AssetManagement.Domain.AgreementStatuses.AgreementStatus", null)
+                        .WithMany()
+                        .HasForeignKey("AgreementStatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AssetManagement.Domain.Assets.Asset", null)
+                        .WithMany()
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AssetManagement.Domain.Locations.Location", null)
+                        .WithMany()
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("AssetManagement.Domain.Persons.Person", null)
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("AssetManagement.Domain.Assets.Asset", b =>

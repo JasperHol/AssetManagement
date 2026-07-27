@@ -20,4 +20,6 @@ public record CreateAssetCommand(string Name,
     DateOnly DepreciationDate,
     int MsLicenceMappingId,
     int StatusId,
-    int AssetTypeId) : ICommand<int>;
+    int AssetTypeId,
+    int PersonId,
+    int LocationId) : ICommand<int>;

@@ -55,7 +55,9 @@ public class AssetsController(ISender sender) : ControllerBase
             request.DepreciationDate,
             request.MsLicenceMappingId,
             request.StatusId,
-            request.AssetTypeId);
+            request.AssetTypeId,
+            request.PersonId,
+            request.LocationId);
 
 
           

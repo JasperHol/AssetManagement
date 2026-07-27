@@ -15,34 +15,32 @@ public sealed class AssetUsage : Entity
 {
 
     private AssetUsage(
-        StartDate startDate,
-        EndDate endDate,
-        DataSource dataSource,
-        int agreementStatus,
-        AgreemnentSignDate agreemnentSignDate,
-        AgreementDeclineDate agreementDeclineDate,
-        AgreementDeclineReason agreementDeclineReason,
-        string agreementUsageAgreementImage,
         int assetId,
-        int personId,
-        int personAssetUsageId,
-        int locationId,
-        int agreementStatusId
+        int? personId,
+        int? locationId,
+        int agreementStatusId,
+        StartDate startDate,
+        EndDate? endDate,
+        DataSource? dataSource,
+        AgreementSignDate? agreementSignDate,
+        AgreementDeclineDate? agreementDeclineDate,
+        AgreementDeclineReason? agreementDeclineReason,
+        string? agreementUsageAgreementImage
+
                 )
     {
+        AssetId = assetId;
+        PersonId = personId;
+        LocationId = locationId;
+        AgreementStatusId = agreementStatusId;
         StartDate = startDate;
         EndDate = endDate;
         DataSource = dataSource;
-        AgreementStatus = agreementStatus;
-        AgreemnentSignDate = agreemnentSignDate;
+        AgreementSignDate = agreementSignDate;
         AgreementDeclineDate = agreementDeclineDate;
         AgreementDeclineReason = agreementDeclineReason;
         AgreementUsageAgreementImage = agreementUsageAgreementImage;
-        AssetId = assetId;
-        PersonId = personId;
-        PersonAssetUsageId = personAssetUsageId;
-        LocationId = locationId;
-        AgreementStatusId = agreementStatusId;
+
 
     }
 
@@ -51,79 +49,70 @@ public sealed class AssetUsage : Entity
     }
 
     public int Id { get; private set; }
-    public StartDate StartDate { get; private set; }
-    public EndDate EndDate { get; private set; }
-    public DataSource DataSource { get; private set; }
-
-    public int AgreementStatus { get; private set; }
-
-    public AgreemnentSignDate AgreemnentSignDate { get; private set; }
-
-    public AgreementDeclineDate AgreementDeclineDate { get; private set; }
-
-    public AgreementDeclineReason AgreementDeclineReason { get; private set; }
-
-    public string AgreementUsageAgreementImage { get; private set; }
-
     public int AssetId { get; private set; }
-
-    public int PersonId { get; private set; }
-
-    public int PersonAssetUsageId { get; private set; }
-
-    public int LocationId { get; private set; }
-
+    public int? PersonId { get; private set; }
+    public int? LocationId { get; private set; }
     public int AgreementStatusId { get; private set; }
+    public StartDate StartDate { get; private set; }
+    public EndDate? EndDate { get; private set; }
+    public DataSource? DataSource { get; private set; }
+    public AgreementSignDate? AgreementSignDate { get; private set; }
+    public AgreementDeclineDate? AgreementDeclineDate { get; private set; }
+    public AgreementDeclineReason? AgreementDeclineReason { get; private set; }
+    public string? AgreementUsageAgreementImage { get; private set; }
+
+
 
 
 
     public static AssetUsage Create(
-        StartDate startDate,
-        EndDate endDate,
-        DataSource dataSource,
-        int agreementStatus,
-        AgreemnentSignDate agreemnentSignDate,
-        AgreementDeclineDate agreementDeclineDate,
-        AgreementDeclineReason agreementDeclineReason,
-        string agreementUsageAgreementImage,
         int assetId,
-        int personId,
-        int personAssetUsageId,
-        int locationId,
-        int agreementStatusId
+        int? personId,
+        int? locationId,
+        int agreementStatusId,
+        StartDate startDate,
+        EndDate? endDate,
+        DataSource? dataSource,
+        AgreementSignDate? agreementSignDate,
+        AgreementDeclineDate? agreementDeclineDate,
+        AgreementDeclineReason? agreementDeclineReason,
+        string? agreementUsageAgreementImage
         )
     {
         var assetUsage = new AssetUsage(
+            assetId,
+            personId,
+            locationId,
+            agreementStatusId,
             startDate,
             endDate,
             dataSource,
-            agreementStatus,
-            agreemnentSignDate,
+            agreementSignDate,
             agreementDeclineDate,
             agreementDeclineReason,
-            agreementUsageAgreementImage,
-            assetId,
-            personId,
-            personAssetUsageId,
-            locationId,
-            agreementStatusId);
+            agreementUsageAgreementImage);
+
+
+        if ((personId.HasValue && locationId.HasValue) || (!personId.HasValue && !locationId.HasValue))
+        {
+            throw new InvalidOperationException("Exactly one of PersonId or LocationId must be specified.");
+        }
 
 
         assetUsage.RaiseDomainEvent(
             new AssetUsageCreatedDomainEvent(
+                assetUsage.AssetId,
+                assetUsage.PersonId,
+                assetUsage.LocationId,
+                assetUsage.AgreementStatusId,
                 assetUsage.StartDate,
                 assetUsage.EndDate,
                 assetUsage.DataSource,
-                assetUsage.AgreementStatus,
-                assetUsage.AgreemnentSignDate,
+                assetUsage.AgreementSignDate,
                 assetUsage.AgreementDeclineDate,
                 assetUsage.AgreementDeclineReason,
-                assetUsage.AgreementUsageAgreementImage,
-                assetUsage.AssetId,
-                assetUsage.PersonId,
-                assetUsage.PersonAssetUsageId,
-                assetUsage.LocationId,
-                assetUsage.AgreementStatusId));
+                assetUsage.AgreementUsageAgreementImage
+                ));
 
         return assetUsage;
     }

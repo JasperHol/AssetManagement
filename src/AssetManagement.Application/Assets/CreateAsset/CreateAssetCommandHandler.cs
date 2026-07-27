@@ -2,7 +2,7 @@
 
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Assets;
-
+using AssetManagement.Domain.AssetUsages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +12,13 @@ using System.Threading.Tasks;
 namespace AssetManagement.Application.Assets.CreateAsset;
 
 internal sealed class CreateAssetCommandHandler(
-    IAssetRepository AssetRepository,
+    IAssetRepository assetRepository,
+    IAssetUsageRepository assetUsageRepository,
     IUnitOfWork unitOfWork)
         : ICommandHandler<CreateAssetCommand, int>
 {
-    private readonly IAssetRepository _AssetRepository = AssetRepository;
+    private readonly IAssetRepository _assetRepository = assetRepository;
+    private readonly IAssetUsageRepository _assetUsageRepository = assetUsageRepository;
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
     public async Task<Result<int>> Handle(CreateAssetCommand request, CancellationToken cancellationToken)
@@ -40,7 +42,27 @@ internal sealed class CreateAssetCommandHandler(
         request.StatusId,
         request.AssetTypeId);
 
-        _AssetRepository.Add(asset);
+        _assetRepository.Add(asset);
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        var personId = request.PersonId == 0 ? (int?)null : request.PersonId;
+        var locationId = request.LocationId == 0 ? (int?)null : request.LocationId;
+
+        var assetUsage = AssetUsage.Create(
+            asset.Id,
+            personId,
+            locationId,
+            1, // agreementStatusId altijd 1=wacht op tekenen);
+            new StartDate(DateTime.UtcNow),
+            new EndDate(DateTime.MinValue),
+            new DataSource("API"),
+            new AgreementSignDate(DateTime.MinValue),
+            new AgreementDeclineDate(DateTime.MinValue),
+            new AgreementDeclineReason(string.Empty),
+            string.Empty
+            ); 
+
+        _assetUsageRepository.Add(assetUsage);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 

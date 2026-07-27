@@ -8,19 +8,18 @@ using System.Threading.Tasks;
 namespace AssetManagement.Domain.AssetUsages.Events;
 
 public sealed record AssetUsageCreatedDomainEvent(
-        StartDate StartDate,
-        EndDate EndDate,
-        DataSource DataSource,
-        int AgreementStatus,
-        AgreemnentSignDate AgreemnentSignDate,
-        AgreementDeclineDate AgreementDeclineDate,
-        AgreementDeclineReason AgreementDeclineReason,
-        string AgreementUsageAgreementImage,
         int AssetId,
-        int PersonId,
-        int PersonAssetUsageId,
-        int LocationId,
-        int AgreementStatusId
+        int? personId,
+        int? locationId,
+        int AgreementStatusId,
+        StartDate StartDate,
+        EndDate? endDate,
+        DataSource? dataSource,
+        AgreementSignDate? agreementSignDate,
+        AgreementDeclineDate? agreementDeclineDate,
+        AgreementDeclineReason? agreementDeclineReason,
+        string? agreementUsageAgreementImage
+
     ) : IDomainEvent;
 
 public sealed record AssetUsageEndedDomainEvent(

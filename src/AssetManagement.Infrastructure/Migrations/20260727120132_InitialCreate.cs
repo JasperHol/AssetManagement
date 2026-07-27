@@ -8,11 +8,26 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AssetManagement.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class create_database : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "AgreementStatuses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    IsStartStatus = table.Column<bool>(type: "bit", nullable: false),
+                    IsStopStatus = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AgreementStatuses", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "AssetKinds",
                 columns: table => new
@@ -80,6 +95,24 @@ namespace AssetManagement.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Locations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BuildingId = table.Column<int>(type: "int", nullable: false),
+                    PersonId = table.Column<int>(type: "int", nullable: false),
+                    ReportingUnitId = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Remark = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
+                    Requestable = table.Column<bool>(type: "bit", nullable: false, defaultValueSql: "1")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Locations", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Manufacturers",
                 columns: table => new
                 {
@@ -92,6 +125,26 @@ namespace AssetManagement.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Manufacturers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Persons",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Requestable = table.Column<bool>(type: "bit", nullable: false, defaultValueSql: "1"),
+                    EmailAddress = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    EmloyeeNumber = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    DataSource = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Sid = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    AccountName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    WorksForId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Persons", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -145,6 +198,54 @@ namespace AssetManagement.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "AssetUsages",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AssetId = table.Column<int>(type: "int", nullable: false),
+                    PersonId = table.Column<int>(type: "int", nullable: true),
+                    LocationId = table.Column<int>(type: "int", nullable: true),
+                    AgreementStatusId = table.Column<int>(type: "int", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DataSource = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    AgreementSignDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    AgreementDeclineDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    AgreementDeclineReason = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    AgreementUsageAgreementImage = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AssetUsages", x => x.Id);
+                    table.CheckConstraint("CK_AssetUsage_PersonOrLocation", "(PersonId IS NOT NULL AND LocationId IS NULL)\r\n          OR\r\n          (PersonId IS NULL AND LocationId IS NOT NULL)");
+                    table.ForeignKey(
+                        name: "FK_AssetUsages_AgreementStatuses_AgreementStatusId",
+                        column: x => x.AgreementStatusId,
+                        principalTable: "AgreementStatuses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_AssetUsages_Assets_AssetId",
+                        column: x => x.AssetId,
+                        principalTable: "Assets",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_AssetUsages_Locations_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "Locations",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_AssetUsages_Persons_PersonId",
+                        column: x => x.PersonId,
+                        principalTable: "Persons",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AssetTypes",
                 columns: table => new
                 {
@@ -178,6 +279,16 @@ namespace AssetManagement.Infrastructure.Migrations
                         principalTable: "Models",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.InsertData(
+                table: "AgreementStatuses",
+                columns: new[] { "Id", "IsStartStatus", "IsStopStatus", "Name" },
+                values: new object[,]
+                {
+                    { 1, true, false, "NotSignedYet" },
+                    { 2, false, true, "Signed" },
+                    { 3, false, true, "Declined" }
                 });
 
             migrationBuilder.InsertData(
@@ -238,6 +349,26 @@ namespace AssetManagement.Infrastructure.Migrations
                 column: "ModelId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_AssetUsages_AgreementStatusId",
+                table: "AssetUsages",
+                column: "AgreementStatusId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AssetUsages_AssetId",
+                table: "AssetUsages",
+                column: "AssetId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AssetUsages_LocationId",
+                table: "AssetUsages",
+                column: "LocationId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AssetUsages_PersonId",
+                table: "AssetUsages",
+                column: "PersonId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Models_ManufacturerId",
                 table: "Models",
                 column: "ManufacturerId");
@@ -247,10 +378,10 @@ namespace AssetManagement.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Assets");
+                name: "AssetTypes");
 
             migrationBuilder.DropTable(
-                name: "AssetTypes");
+                name: "AssetUsages");
 
             migrationBuilder.DropTable(
                 name: "AuditLogs");
@@ -266,6 +397,18 @@ namespace AssetManagement.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "Models");
+
+            migrationBuilder.DropTable(
+                name: "AgreementStatuses");
+
+            migrationBuilder.DropTable(
+                name: "Assets");
+
+            migrationBuilder.DropTable(
+                name: "Locations");
+
+            migrationBuilder.DropTable(
+                name: "Persons");
 
             migrationBuilder.DropTable(
                 name: "Manufacturers");
