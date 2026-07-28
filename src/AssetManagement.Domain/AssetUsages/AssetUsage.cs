@@ -1,6 +1,8 @@
 ﻿
+using AssetManagement.Domain.AgreementStatuses;
 using global::AssetManagement.Domain.Abstractions;
 using global::AssetManagement.Domain.AssetUsages.Events;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,9 +64,6 @@ public sealed class AssetUsage : Entity
     public string? AgreementUsageAgreementImage { get; private set; }
 
 
-
-
-
     public static AssetUsage Create(
         int assetId,
         int? personId,
@@ -79,54 +78,112 @@ public sealed class AssetUsage : Entity
         string? agreementUsageAgreementImage
         )
     {
+
+        if ((personId.HasValue && locationId.HasValue) ||
+            (!personId.HasValue && !locationId.HasValue))
+        {
+            throw new InvalidOperationException(
+                "Exactly one of PersonId or LocationId must be specified.");
+        }
+
+        var _personId = personId == 0 ? (int?)null : personId;
+        var _locationId = locationId == 0 ? (int?)null : locationId;
+
         var assetUsage = new AssetUsage(
             assetId,
-            personId,
-            locationId,
+            _personId,
+            _locationId,
             agreementStatusId,
-            startDate,
+            new StartDate(DateTime.UtcNow),
             endDate,
             dataSource,
             agreementSignDate,
             agreementDeclineDate,
             agreementDeclineReason,
-            agreementUsageAgreementImage);
-
-
-        if ((personId.HasValue && locationId.HasValue) || (!personId.HasValue && !locationId.HasValue))
-        {
-            throw new InvalidOperationException("Exactly one of PersonId or LocationId must be specified.");
-        }
-
+            agreementUsageAgreementImage
+        );
 
         assetUsage.RaiseDomainEvent(
             new AssetUsageCreatedDomainEvent(
                 assetUsage.AssetId,
                 assetUsage.PersonId,
-                assetUsage.LocationId,
-                assetUsage.AgreementStatusId,
-                assetUsage.StartDate,
-                assetUsage.EndDate,
-                assetUsage.DataSource,
-                assetUsage.AgreementSignDate,
-                assetUsage.AgreementDeclineDate,
-                assetUsage.AgreementDeclineReason,
-                assetUsage.AgreementUsageAgreementImage
-                ));
+                assetUsage.LocationId));
 
         return assetUsage;
     }
 
     public void End()
         {
-            if (EndDate.Value != DateTime.MinValue)
-                throw new InvalidOperationException("Asset usage has already ended.");
+        if (EndDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage has already ended.");
+        }
 
-            EndDate = new EndDate(DateTime.UtcNow);
+        EndDate = new EndDate(DateTime.UtcNow);
 
             RaiseDomainEvent(new AssetUsageEndedDomainEvent(Id, EndDate));
         }
 
+    public void Sign()
+    {
+        if (EndDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage has already ended.");
+        }
+
+        if (AgreementSignDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage is already signed.");
+        }
+
+        if (AgreementDeclineDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage is already declined.");
+        }
+
+        if (AgreementStatusId != 1)
+        {
+            throw new InvalidOperationException($"Asset usage has incorrect AgreementStatus. Current AgreementStatusId: {AgreementStatusId}.");
+        }
+
+        AgreementSignDate = new AgreementSignDate(DateTime.UtcNow);
+        AgreementStatusId = 2;
+
+        RaiseDomainEvent(new AssetUsageSignedDomainEvent(Id, AgreementSignDate));
+    }
+    public void Decline(string agreementDeclineReason)
+    {
+        if (EndDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage has already ended.");
+        }
+
+        if (AgreementSignDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage is already signed.");
+        }
+
+        if (AgreementDeclineDate is not null)
+        {
+            throw new InvalidOperationException("Asset usage is already declined.");
+        }
+
+        if (AgreementStatusId != 1)
+        {
+            throw new InvalidOperationException($"Asset usage has incorrect AgreementStatus. Current AgreementStatusId: {AgreementStatusId}.");
+        }
+
+        if (AgreementDeclineReason is null)
+        {
+            throw new InvalidOperationException($"No decline reason given");
+        }
+
+
+        AgreementDeclineDate = new AgreementDeclineDate(DateTime.UtcNow);
+        AgreementStatusId = 3;
+        AgreementDeclineReason = new AgreementDeclineReason(agreementDeclineReason);
+        RaiseDomainEvent(new AssetUsageDeclinedDomainEvent(Id, AgreementDeclineDate));
+    }
 
 }
 

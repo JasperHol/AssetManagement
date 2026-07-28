@@ -24,4 +24,4 @@ public sealed record AssetCreatedDomainEvent(int Asset,
         int StatusId,
         int AsetTypeId) : IDomainEvent;
 
-//public sealed record AssetUpdatedDomainEvent(int AssetType, Requestable Requestable) : IDomainEvent;
+public sealed record AssetUpdateStatusDomainEvent(int Asset, int StatusId) : IDomainEvent;

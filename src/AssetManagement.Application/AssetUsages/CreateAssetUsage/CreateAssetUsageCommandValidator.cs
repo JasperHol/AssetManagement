@@ -13,8 +13,8 @@ public sealed class CreateAssetUsageCommandValidator
 {
     public CreateAssetUsageCommandValidator()
     {
-        RuleFor(c => c.StartDate)
-            .NotEmpty();
+        //RuleFor(c => c.StartDate)
+        //    .NotEmpty();
 
      
 

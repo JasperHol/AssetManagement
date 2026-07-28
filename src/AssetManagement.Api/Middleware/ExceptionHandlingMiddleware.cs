@@ -57,6 +57,14 @@ public class ExceptionHandlingMiddleware
                 "Validation error",
                 "One or more validation errors has occurred",
                 validationException.Errors),
+
+            InvalidOperationException invalidOperationException => new ExceptionDetails(
+                StatusCodes.Status400BadRequest,
+                "BusinessRuleViolation",
+                "Business rule violation",
+                invalidOperationException.Message,
+                null),
+
             _ => new ExceptionDetails(
                 StatusCodes.Status500InternalServerError,
                 "ServerError",

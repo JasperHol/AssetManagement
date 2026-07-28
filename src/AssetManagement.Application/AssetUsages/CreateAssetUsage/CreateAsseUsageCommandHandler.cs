@@ -1,5 +1,6 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
 using AssetManagement.Domain.Abstractions;
+using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.AssetUsages;
 using System;
 using System.Collections.Generic;
@@ -25,20 +26,29 @@ internal sealed class CreateAssetUsageCommandHandler
 
     public async Task<Result<int>> Handle(CreateAssetUsageCommand request, CancellationToken cancellationToken)
     {
+
+
+        var previousAssetUsage = await _assetUsageRepository
+            .GetByIdAsync(request.PreviousAssetUsageId, cancellationToken);
+
+        if (previousAssetUsage is null)
+        {
+            return Result.Failure<int>(
+                Error.NotFound(
+                    "PreviousAssetUsage.NotFound",
+                    $"PreviousAssetUsage with id {request.PreviousAssetUsageId} was not found"));
+        }
+
+        previousAssetUsage.End();
+
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+
         var assetUsage = AssetUsage.Create(
             request.AssetId,
             request.PersonId,
             request.LocationId,
-            request.AgreementStatusId,
-            new StartDate(request.StartDate),
-            new EndDate(request.EndDate),
-            new DataSource(request.DataSource),
-            new AgreementSignDate(request.AgreementSignDate),
-            new AgreementDeclineDate(request.AgreementDeclineDate),
-            new AgreementDeclineReason(request.AgreementDeclineReason),
-            request.AgreementUsageAgreementImage
-
-        );
+            1, null, null, null, null, null, null,null);
 
         _assetUsageRepository.Add(assetUsage);
 

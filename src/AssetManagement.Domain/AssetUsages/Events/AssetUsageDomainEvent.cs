@@ -10,21 +10,22 @@ namespace AssetManagement.Domain.AssetUsages.Events;
 public sealed record AssetUsageCreatedDomainEvent(
         int AssetId,
         int? personId,
-        int? locationId,
-        int AgreementStatusId,
-        StartDate StartDate,
-        EndDate? endDate,
-        DataSource? dataSource,
-        AgreementSignDate? agreementSignDate,
-        AgreementDeclineDate? agreementDeclineDate,
-        AgreementDeclineReason? agreementDeclineReason,
-        string? agreementUsageAgreementImage
-
+        int? locationId   
     ) : IDomainEvent;
 
 public sealed record AssetUsageEndedDomainEvent(
     int AssetUsageId,
     EndDate EndDate)
+    : IDomainEvent;
+
+public sealed record AssetUsageSignedDomainEvent(
+    int AssetUsageId,
+    AgreementSignDate AgreementSignDate)
+    : IDomainEvent;
+
+public sealed record AssetUsageDeclinedDomainEvent(
+    int AssetUsageId,
+    AgreementDeclineDate AgreementDeclineDate)
     : IDomainEvent;
 
 //public sealed record AssetUpdatedDomainEvent(int AssetType, Requestable Requestable) : IDomainEvent;

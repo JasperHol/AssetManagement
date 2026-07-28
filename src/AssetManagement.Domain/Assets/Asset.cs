@@ -1,4 +1,7 @@
-﻿using global::AssetManagement.Domain.Abstractions;
+﻿using AssetManagement.Domain.AgreementStatuses;
+using AssetManagement.Domain.AssetUsages;
+using AssetManagement.Domain.AssetUsages.Events;
+using global::AssetManagement.Domain.Abstractions;
 using global::AssetManagement.Domain.Assets;
 using global::AssetManagement.Domain.Assets.Events;
 using System;
@@ -142,5 +145,19 @@ public sealed class Asset : Entity
         return Asset;
     }
 
-   
+    public void UpdateStatus(int statusId)
+    {
+        //if (EndDate is not null)
+        //{  status kan niet 
+        //    throw new InvalidOperationException("Asset usage has already ended.");
+        //}
+
+        
+
+
+        
+        StatusId = statusId;
+        RaiseDomainEvent(new AssetUpdateStatusDomainEvent(Id, StatusId));
+    }
+
 }

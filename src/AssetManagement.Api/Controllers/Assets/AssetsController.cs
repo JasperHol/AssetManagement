@@ -1,7 +1,7 @@
 ﻿using AssetManagement.Api.Controllers.Assets;
 using AssetManagement.Application.Assets.CreateAsset;
 using AssetManagement.Application.Assets.SearchAsset;
-
+using AssetManagement.Application.Assets.UpdateAssetStatus;
 using AssetManagement.Domain.Assets;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -70,33 +70,31 @@ public class AssetsController(ISender sender) : ControllerBase
 
         return CreatedAtAction(nameof(CreateAsset), new { id = result.Value }, result.Value);
     }
-    
 
-    ///// <summary>
-    ///// Update Asset.
-    ///// </summary>
-    ///// <remarks>
-    ///// Updates whether a Asset can be selected.
-    ///// </remarks>
-    //[HttpPut("Asset/{id:int}")]
-    //public async Task<IActionResult> UpdateAsset(
-    //    int id,
-    //    [FromBody] UpdateAssetRequest request,
-    //    CancellationToken cancellationToken)
-    //{
-    //    var command = new UpdateAssetCommand(
-    //        id,
-    //        request.Requestable);
 
-    //    var result = await sender.Send(command, cancellationToken);
+    /// <summary>
+    /// Update AssetStatus.
+    /// </summary>
+    /// <remarks>
+    /// Update Asset Status.
+    /// </remarks>
+    [HttpPut("Asset_updatestatus/{id:int}")]
+    public async Task<IActionResult> UpdateAssetStatus(
+        int id,
+        [FromBody] UpdateAssetStatusRequest request,
+        CancellationToken cancellationToken)
+    {
+        var command = new UpdateAssetStatusCommand(id, request.StatusId);
 
-    //    if (result.IsFailure)
-    //    {
-    //        return BadRequest(result.Error);
-    //    }
+        var result = await sender.Send(command, cancellationToken);
 
-    //    return NoContent();
-    //}
+        if (result.IsFailure)
+        {
+            return BadRequest(result.Error);
+        }
+
+        return NoContent();
+    }
 
 }
 

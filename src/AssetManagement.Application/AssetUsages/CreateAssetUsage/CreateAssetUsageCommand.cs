@@ -8,15 +8,9 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Application.AssetUsages.CreateAssetUsage;
 public record CreateAssetUsageCommand(
+    int PreviousAssetUsageId,
     int AssetId,
     int PersonId,
-    int LocationId,
-    int AgreementStatusId,
-    DateTime StartDate,
-    DateTime EndDate,
-    string DataSource,
-    DateTime AgreementSignDate,
-    DateTime AgreementDeclineDate,
-    string AgreementDeclineReason,
-    string AgreementUsageAgreementImage
+    int LocationId
+
     )    : ICommand<int>;
