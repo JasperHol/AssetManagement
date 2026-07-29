@@ -1,5 +1,4 @@
 ﻿using AssetManagement.Api.Controllers.Manufacturers;
-using AssetManagement.Api.Controllers.Locations;
 using AssetManagement.Application.Manufacturers.UpdateManufacturer;
 using AssetManagement.Application.Locations.CreateLocation;
 using AssetManagement.Application.Locations.SearchLocation;
@@ -71,7 +70,7 @@ namespace AssetManagement.Api.Controllers.Locations
         /// Requestable aanpassen zodat een location wel of niet gekozen kan worden..
         /// </remarks>
         [HttpPut("location/{id:int}")]
-        public async Task<IActionResult> UpdateManufacturer(
+        public async Task<IActionResult> UpdateLocation(
             int id,
             [FromBody] UpdateLocationRequest request,
             CancellationToken cancellationToken)

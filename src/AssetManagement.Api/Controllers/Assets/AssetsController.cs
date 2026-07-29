@@ -1,10 +1,12 @@
 ﻿using AssetManagement.Api.Controllers.Assets;
 using AssetManagement.Application.Assets.CreateAsset;
 using AssetManagement.Application.Assets.SearchAsset;
+using AssetManagement.Application.Assets.SearchAssetStatus;
 using AssetManagement.Application.Assets.UpdateAssetStatus;
 using AssetManagement.Domain.Assets;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace AssetManagement.Api.Controllers.Assets;
 
@@ -30,7 +32,29 @@ public class AssetsController(ISender sender) : ControllerBase
         return Ok(result.Value);
     }
 
-    
+    /// <summary>
+    /// Get All Assets with status.
+    /// </summary>
+    /// <remarks>
+    /// Lijst van alle Assets ophalen met een gegeven status.
+    /// </remarks>
+    [HttpGet("AssetStatus/{id}")]
+    public async Task<IActionResult> GetAssetStatus(
+        AssetStatusId id,
+        CancellationToken cancellationToken)
+    {
+        var command = new SearchAssetStatusQuery((int)id);
+
+        var result = await sender.Send(command, cancellationToken);
+
+        if (result.IsFailure)
+        {
+            return BadRequest(result.Error);
+        }
+
+        return Ok(result.Value);
+    }
+
     /// <summary>
     /// Create New Asset.
     /// </summary>
@@ -78,7 +102,7 @@ public class AssetsController(ISender sender) : ControllerBase
     /// <remarks>
     /// Update Asset Status.
     /// </remarks>
-    [HttpPut("Asset_updatestatus/{id:int}")]
+    [HttpPut("Asset_updateStatus/{id:int}")]
     public async Task<IActionResult> UpdateAssetStatus(
         int id,
         [FromBody] UpdateAssetStatusRequest request,

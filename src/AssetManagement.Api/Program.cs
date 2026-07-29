@@ -31,23 +31,26 @@ builder.Services.AddSwaggerGen(c =>
 
 //
 
-//builder.Services.AddSwaggerGen(options => {options.SchemaFilter<EnumSchemaFilter>(); });
+//builder.Services.AddSwaggerGen(options => { options.SchemaFilter<EnumSchemaFilter>(); });
 
-//builder.Services.AddControllers()
-//    .AddJsonOptions(options =>
-//    {
-//        // Ensure enums are serialized as strings
-//        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-//    });
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        // Ensure enums are serialized as strings
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 
-//builder.Services.AddEndpointsApiExplorer();
-//builder.Services.AddSwaggerGen(options =>
-//{
-//    // This ensures enums show as dropdowns in Swagger
-//    options.UseInlineDefinitionsForEnums();
-//});
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    // This ensures enums show as dropdowns in Swagger
+    options.UseInlineDefinitionsForEnums();
+});
 
 //
+
+
+
 
 var app = builder.Build();
 

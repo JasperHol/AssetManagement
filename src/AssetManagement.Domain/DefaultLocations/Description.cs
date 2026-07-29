@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Domain.AssetUsages;
+namespace AssetManagement.Domain.DefaultLocations;
 
-public record EndDate(DateTime? Value);
+
+public record Description(string Value);

@@ -54,7 +54,7 @@ internal sealed class CreateAssetCommandHandler(
             locationId,
             1, // agreementStatusId altijd 1=wacht op tekenen);
             new StartDate(DateTime.UtcNow),
-            new EndDate(DateTime.MinValue),
+            new EndDate(null),
             new DataSource("API"),
             new AgreementSignDate(DateTime.MinValue),
             new AgreementDeclineDate(DateTime.MinValue),

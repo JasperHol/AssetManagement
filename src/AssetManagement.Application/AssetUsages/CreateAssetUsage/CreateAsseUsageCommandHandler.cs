@@ -14,13 +14,16 @@ internal sealed class CreateAssetUsageCommandHandler
     : ICommandHandler<CreateAssetUsageCommand, int>
 {
     private readonly IAssetUsageRepository _assetUsageRepository;
+    private readonly IAssetRepository _assetRepository;
     private readonly IUnitOfWork _unitOfWork;
 
     public CreateAssetUsageCommandHandler(
         IAssetUsageRepository AssetUsageRepository,
+        IAssetRepository AssetRepository,
         IUnitOfWork unitOfWork)
     {
         _assetUsageRepository = AssetUsageRepository;
+        _assetRepository = AssetRepository;
         _unitOfWork = unitOfWork;
     }
 
@@ -53,6 +56,14 @@ internal sealed class CreateAssetUsageCommandHandler
         _assetUsageRepository.Add(assetUsage);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+
+
+        var asset = await _assetRepository.GetByIdAsync(request.AssetId, cancellationToken);
+
+        asset.UpdateStatus(3);
+
+
 
         return Result.Success(assetUsage.Id);
     }

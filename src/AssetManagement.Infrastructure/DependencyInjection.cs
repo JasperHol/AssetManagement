@@ -2,16 +2,18 @@
 using AssetManagement.Application.Abstractions.Data;
 using AssetManagement.Application.Abstractions.Email;
 using AssetManagement.Domain.Abstractions;
+using AssetManagement.Domain.AgreementStatuses;
 using AssetManagement.Domain.AssetKinds;
 using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.AssetTypes;
 using AssetManagement.Domain.AssetUsages;
+using AssetManagement.Domain.DefaultLocations;
+using AssetManagement.Domain.Locations;
 using AssetManagement.Domain.Manufacturers;
 using AssetManagement.Domain.Models;
+using AssetManagement.Domain.Persons;
 using AssetManagement.Domain.Statuses;
 using AssetManagement.Domain.StatusTransitions;
-using AssetManagement.Domain.Locations;
-using AssetManagement.Domain.Persons;
 using AssetManagement.Domain.Users;
 using AssetManagement.Infrastructure.Clock;
 using AssetManagement.Infrastructure.Data;
@@ -21,7 +23,6 @@ using Dapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using AssetManagement.Domain.AgreementStatuses;
 
 namespace AssetManagement.Infrastructure;
 
@@ -65,6 +66,8 @@ public static class DependencyInjection
         services.AddScoped<IPersonRepository, PersonRepository>();
 
         services.AddScoped<ILocationRepository, LocationRepository>();
+
+        services.AddScoped<IDefaultLocationRepository, DefaultLocationRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
 
