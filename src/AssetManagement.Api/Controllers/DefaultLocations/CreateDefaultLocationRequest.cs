@@ -5,3 +5,9 @@ public sealed record CreateDefaultLocationRequest(
     int LocationId,
     string Description
 );
+
+public sealed record ChangeDefaultLocationRequest(
+
+    int LocationId
+
+);

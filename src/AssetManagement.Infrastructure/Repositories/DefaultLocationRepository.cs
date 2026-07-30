@@ -20,4 +20,21 @@ internal sealed class DefaultLocationRepository : Repository<DefaultLocation>, I
         DbContext.Set<DefaultLocation>().Update(defaultlocation);
         return defaultlocation;
     }
+
+
+    public async Task<bool> ExistsAsync(
+        int statusId,
+        int locationId,
+        CancellationToken cancellationToken = default)
+    {
+        return await DbContext.Set<DefaultLocation>()
+            .AnyAsync(
+                x => x.StatusId == statusId &&
+                     x.LocationId == locationId,
+                cancellationToken);
+    }
+
+
+
+
 }

@@ -1,5 +1,6 @@
 ﻿using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.DefaultLocations.Events;
+using AssetManagement.Domain.Locations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,5 +62,21 @@ public sealed class DefaultLocation : Entity
 
 
     }
+
+    public void ChangeDefaultLocation(int locationId)
+    {
+        if (LocationId == locationId)
+        {
+            return;
+        }
+
+        LocationId = locationId;
+
+        RaiseDomainEvent(
+            new DefaultLocationLocationChangedDomainEvent(
+                Id,
+                LocationId));
+    }
+
 }
 

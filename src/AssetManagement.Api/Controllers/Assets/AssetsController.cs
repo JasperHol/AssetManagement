@@ -40,7 +40,7 @@ public class AssetsController(ISender sender) : ControllerBase
     /// </remarks>
     [HttpGet("AssetStatus/{id}")]
     public async Task<IActionResult> GetAssetStatus(
-        AssetStatusId id,
+        StatusId id,
         CancellationToken cancellationToken)
     {
         var command = new SearchAssetStatusQuery((int)id);

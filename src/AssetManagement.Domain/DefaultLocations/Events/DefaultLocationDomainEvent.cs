@@ -12,3 +12,4 @@ public sealed record DefaultLocationCreatedDomainEvent(
         int locationId,
         Description description) : IDomainEvent;
 public sealed record DefaultLocationUpdatedDomainEvent(int Id, Description description) : IDomainEvent;
+public sealed record DefaultLocationLocationChangedDomainEvent(int DefaultLocationId, int LocationId) : IDomainEvent;

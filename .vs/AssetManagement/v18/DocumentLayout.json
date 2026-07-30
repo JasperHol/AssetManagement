@@ -3,40 +3,88 @@
   "WorkspaceRootPath": "F:\\Users\\jho\\Documents\\AssetManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\updatedefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\updatedefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\defaultlocations\\defaultlocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\defaultlocations\\defaultlocationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\updatedefaultlocationcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\updatedefaultlocationcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\defaultlocations\\updatedefaultlocationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\defaultlocations\\updatedefaultlocationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\changedefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\changedefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\locations\\locationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\locations\\locationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\changedefaultlocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\changedefaultlocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\updatedefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\updatedefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\defaultlocations\\defaultlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\defaultlocations\\defaultlocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\createdefaultlocation\\createdefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\createdefaultlocation\\createdefaultlocationcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\createdefaultlocation\\createdefaultlocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\createdefaultlocation\\createdefaultlocationcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\repositories\\defaultlocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\repositories\\defaultlocationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\locations\\locationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\locations\\locationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\statuses\\statusescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\statuses\\statusescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\defaultloctionchangeddomaineventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\defaultloctionchangeddomaineventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\changedefaultlocationcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\changedefaultlocation\\changedefaultlocationcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\defaultlocations\\updatedefaultlocationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\defaultlocations\\updatedefaultlocationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\defaultlocations\\events\\defaultlocationdomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\defaultlocations\\events\\defaultlocationdomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\defaultloctionupdateddomaineventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE5FDC83-56E9-4CF6-8D9D-0B2C2F11D7F9}|src\\AssetManagement.Application\\AssetManagement.Application.csproj|solutionrelative:src\\assetmanagement.application\\defaultlocations\\updatedefaultlocation\\defaultloctionupdateddomaineventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\agreementstatuses\\agreementstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\agreementstatuses\\agreementstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260729105929_DefaultLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\AssetManagement.Infrastructure\\Migrations\\20260729105929_DefaultLocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.domain\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9320FB7A-4C41-4564-BA73-03066EDD41CE}|src\\AssetManagement.Domain\\AssetManagement.Domain.csproj|solutionrelative:src\\assetmanagement.domain\\abstractions\\error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.infrastructure\\configurations\\defaultlocationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2F42B52-0328-4968-8EB0-B3CBCA02A808}|src\\AssetManagement.Infrastructure\\AssetManagement.Infrastructure.csproj|solutionrelative:src\\assetmanagement.infrastructure\\configurations\\defaultlocationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\assets\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\assets\\assetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|f:\\users\\jho\\documents\\assetmanagement\\src\\assetmanagement.api\\controllers\\assets\\statusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668B54A6-2BEC-42D5-B60F-709C24731C8C}|src\\AssetManagement.Api\\AssetManagement.Api.csproj|solutionrelative:src\\assetmanagement.api\\controllers\\assets\\statusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 267,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,67 +114,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UpdateDefaultLocationRequest.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
-              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DependencyInjection.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DependencyInjection.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:29:27.844Z",
+              "WhenOpened": "2026-07-30T09:06:03.298Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LocationsController.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs*",
-              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs*",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:28:53.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "UpdateDefaultLocationCommandHandler.cs",
               "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandHandler.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandHandler.cs*",
-              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandHandler.cs*",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAfAAAAAAAAAA==",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandHandler.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:01:30.607Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DefaultLocationsController.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs",
-              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAowEwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:19:01.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UpdateDefaultLocationCommandValidator.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandValidator.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandValidator.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandValidator.cs",
-              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\UpdateDefaultLocationCommandValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:20:28.845Z",
+              "WhenOpened": "2026-07-30T08:29:26.904Z",
               "EditorCaption": ""
             },
             {
@@ -137,48 +146,243 @@
               "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\DefaultLocations\\DefaultLocation.cs",
               "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\DefaultLocations\\DefaultLocation.cs",
               "RelativeToolTip": "src\\AssetManagement.Domain\\DefaultLocations\\DefaultLocation.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwDkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAWwEEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:23:24.947Z",
+              "WhenOpened": "2026-07-30T07:17:16.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DefaultLocationsController.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs*",
+              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\DefaultLocationsController.cs*",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAwwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T12:28:44.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChangeDefaultLocationCommand.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommand.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommand.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommand.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:51:15.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangeDefaultLocationCommandHandler.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandHandler.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandHandler.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandHandler.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:51:50.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "DefaultLocationDomainEvent.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
-              "RelativeToolTip": "src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA2AAAAAAAAAA==",
+              "Title": "CreateDefaultLocationCommandHandler.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommandHandler.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommandHandler.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommandHandler.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvx4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:23:08.7Z",
+              "WhenOpened": "2026-07-29T14:32:29.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DefaultLoctionUpdatedDomainEventHandler.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\DefaultLoctionUpdatedDomainEventHandler.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\DefaultLoctionUpdatedDomainEventHandler.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\DefaultLoctionUpdatedDomainEventHandler.cs",
-              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\UpdateDefaultLocation\\DefaultLoctionUpdatedDomainEventHandler.cs",
+              "Title": "CreateDefaultLocationCommand.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommand.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommand.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommand.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\CreateDefaultLocation\\CreateDefaultLocationCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T11:20:06.529Z",
+              "WhenOpened": "2026-07-30T08:55:46.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "20260729105929_DefaultLocation.cs",
-              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260729105929_DefaultLocation.cs",
-              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Migrations\\20260729105929_DefaultLocation.cs",
-              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Migrations\\20260729105929_DefaultLocation.cs",
-              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Migrations\\20260729105929_DefaultLocation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "DefaultLocationRepository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\DefaultLocationRepository.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Repositories\\DefaultLocationRepository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\DefaultLocationRepository.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Repositories\\DefaultLocationRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T10:59:29.243Z",
+              "WhenOpened": "2026-07-29T14:21:50.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StatusesController.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Statuses\\StatusesController.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\Statuses\\StatusesController.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Statuses\\StatusesController.cs",
+              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\Statuses\\StatusesController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T08:23:29.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LocationsController.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs",
+              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\Locations\\LocationsController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T08:24:05.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UpdateDefaultLocationRequest.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
+              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\DefaultLocations\\UpdateDefaultLocationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:47:47.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChangeDefaultLocationCommandValidator.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandValidator.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandValidator.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\ChangeDefaultLocationCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:51:02.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DefaultLoctionChangedDomainEventHandler.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\DefaultLoctionChangedDomainEventHandler.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\DefaultLoctionChangedDomainEventHandler.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\DefaultLoctionChangedDomainEventHandler.cs",
+              "RelativeToolTip": "src\\AssetManagement.Application\\DefaultLocations\\ChangeDefaultLocation\\DefaultLoctionChangedDomainEventHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:52:51.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DefaultLocationDomainEvent.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\DefaultLocations\\Events\\DefaultLocationDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:22:27.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AgreementStatus.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AgreementStatuses\\AgreementStatus.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\AgreementStatuses\\AgreementStatus.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\AgreementStatuses\\AgreementStatus.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\AgreementStatuses\\AgreementStatus.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T06:59:06.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Repositories\\Repository.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Repositories\\Repository.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-30T07:08:01.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DefaultLocationConfiguration.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\DefaultLocationConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Infrastructure\\Configurations\\DefaultLocationConfiguration.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Infrastructure\\Configurations\\DefaultLocationConfiguration.cs",
+              "RelativeToolTip": "src\\AssetManagement.Infrastructure\\Configurations\\DefaultLocationConfiguration.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T14:23:24.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Error.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Abstractions\\Error.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Domain\\Abstractions\\Error.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Domain\\Abstractions\\Error.cs",
+              "RelativeToolTip": "src\\AssetManagement.Domain\\Abstractions\\Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T14:37:52.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StatusEnum.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Assets\\StatusEnum.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\Assets\\StatusEnum.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Assets\\StatusEnum.cs",
+              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\Assets\\StatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T12:37:49.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AssetsController.cs",
+              "DocumentMoniker": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Assets\\AssetsController.cs",
+              "RelativeDocumentMoniker": "src\\AssetManagement.Api\\Controllers\\Assets\\AssetsController.cs",
+              "ToolTip": "F:\\Users\\jho\\Documents\\AssetManagement\\src\\AssetManagement.Api\\Controllers\\Assets\\AssetsController.cs",
+              "RelativeToolTip": "src\\AssetManagement.Api\\Controllers\\Assets\\AssetsController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwDIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T12:31:04.467Z",
               "EditorCaption": ""
             }
           ]

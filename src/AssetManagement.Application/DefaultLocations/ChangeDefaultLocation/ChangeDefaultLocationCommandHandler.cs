@@ -1,23 +1,22 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
-using AssetManagement.Application.DefaultLocations.CreateDefaultLocation;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.DefaultLocations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 
-namespace AssetManagement.Application.DefaultLocations.CreateDefaultLocation;
 
-internal sealed class CreateDefaultLocationCommandHandler
-    : ICommandHandler<CreateDefaultLocationCommand, int>
+namespace AssetManagement.Application.DefaultLocations.ChangeDefaultLocation;
+
+internal sealed class ChangeDefaultLocationCommandHandler
+    : ICommandHandler<ChangeDefaultLocationCommand, int>
 {
     private readonly IDefaultLocationRepository _defaultLocationRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public CreateDefaultLocationCommandHandler(
+    public ChangeDefaultLocationCommandHandler(
         IDefaultLocationRepository defaultLocationRepository,
         IUnitOfWork unitOfWork)
     {
@@ -25,11 +24,23 @@ internal sealed class CreateDefaultLocationCommandHandler
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<Result<int>> Handle(CreateDefaultLocationCommand request, CancellationToken cancellationToken)
+    public async Task<Result<int>> Handle(
+    ChangeDefaultLocationCommand request,
+    CancellationToken cancellationToken)
     {
+        var defaultLocation = await _defaultLocationRepository
+            .GetByIdAsync(request.Id, cancellationToken);
+
+        if (defaultLocation is null)
+        {
+            return Result.Failure<int>(
+                Error.NotFound(
+                    "DefaultLocation.NotFound",
+                    $"DefaultLocation with id {request.Id} was not found"));
+        }
 
         bool exists = await _defaultLocationRepository.ExistsAsync(
-            request.StatusId,
+            request.Id,
             request.LocationId,
             cancellationToken);
 
@@ -38,16 +49,11 @@ internal sealed class CreateDefaultLocationCommandHandler
             return Result.Failure<int>(
                 Error.Validation(
                     "DefaultLocation.AlreadyExists",
-                    $"A DefaultLocation with StatusId {request.StatusId} and LocationId {request.LocationId} already exists."));
+                    $"A DefaultLocation with StatusId {request.Id} and LocationId {request.LocationId} already exists."));
         }
-        var defaultLocation = DefaultLocation.Create(
-            request.StatusId,
-            request.LocationId,
-            new Description(request.Description));
 
-        _defaultLocationRepository.Add(defaultLocation);
+        defaultLocation.ChangeDefaultLocation(request.LocationId);
 
- 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return Result.Success(defaultLocation.Id);

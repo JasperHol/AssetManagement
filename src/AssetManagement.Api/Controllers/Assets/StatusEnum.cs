@@ -3,7 +3,7 @@
     /// <summary>
     /// Asset status selection.
     /// </summary>
-    public enum AssetStatusId
+    public enum StatusId
     {
         /// <summary>
         /// 1 - CreateAsset
