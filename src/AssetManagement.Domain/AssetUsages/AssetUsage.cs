@@ -79,7 +79,7 @@ public sealed class AssetUsage : Entity
         )
     {
 
-        if (!personId.HasValue || !locationId.HasValue)
+        if ((personId.HasValue && locationId.HasValue) || (!personId.HasValue && !locationId.HasValue))
         {
             throw new InvalidOperationException(
                 "Exactly one of PersonId or LocationId must be specified.");

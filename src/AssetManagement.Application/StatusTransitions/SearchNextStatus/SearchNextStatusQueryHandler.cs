@@ -1,6 +1,7 @@
 ﻿using AssetManagement.Application.Abstractions.Data;
 using AssetManagement.Application.Abstractions.Messaging;
 using AssetManagement.Domain.Abstractions;
+using AssetManagement.Domain.StatusTransitions;
 using Dapper;
 using System;
 using System.Collections.Generic;

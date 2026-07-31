@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace AssetManagement.Domain.AssetUsages;
 
-public record AgreementSignDate(DateTime Value);
+public record AgreementSignDate(DateTime? Value);
 

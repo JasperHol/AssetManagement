@@ -2,6 +2,8 @@
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.AssetUsages;
+using AssetManagement.Domain.StatusTransitions;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ internal sealed class CreateAssetUsageCommandHandler
 {
     private readonly IAssetUsageRepository _assetUsageRepository;
     private readonly IAssetRepository _assetRepository;
+    private readonly IStatusTransitionRepository _statusTransitionRepository;
     private readonly IUnitOfWork _unitOfWork;
 
     public CreateAssetUsageCommandHandler(
@@ -42,15 +45,48 @@ internal sealed class CreateAssetUsageCommandHandler
                     $"PreviousAssetUsage with id {request.PreviousAssetUsageId} was not found"));
         }
 
-        previousAssetUsage.End();
+        var asset = await _assetRepository.GetByIdAsync(
+            previousAssetUsage.AssetId,
+            cancellationToken);
+
+                if (asset is null)
+                {
+                    return Result.Failure<int>(
+                        Error.NotFound(
+                            "Asset.NotFound",
+                            $"Asset with id {previousAssetUsage.AssetId} was not found"));
+                }
+
+        var allowed = await _statusTransitionRepository.IsTransitionAllowedAsync(
+            asset.StatusId,
+            request.StatusId,
+            cancellationToken);
+
+        if (!allowed)
+        {
+            return Result.Failure<int>(
+                Error.Validation(
+                    "StatusTransition.NotAllowed",
+                    $"Status transition from {asset.StatusId} to {request.StatusId} is not allowed."));
+        }
+
+        asset.UpdateStatus(request.StatusId);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
 
+
+        previousAssetUsage.End();
+
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
+
+        var personId = request.PersonId == 0 ? (int?)null : request.PersonId;
+        var locationId = request.LocationId == 0 ? (int?)null : request.LocationId;
+
         var assetUsage = AssetUsage.Create(
-            request.AssetId,
-            request.PersonId,
-            request.LocationId,
+            previousAssetUsage.AssetId,
+            personId,
+            locationId,
             1, null, null, null, null, null, null,null);
 
         _assetUsageRepository.Add(assetUsage);
@@ -59,11 +95,11 @@ internal sealed class CreateAssetUsageCommandHandler
 
 
 
-        var asset = await _assetRepository.GetByIdAsync(request.AssetId, cancellationToken);
-
-        asset.UpdateStatus(3);
 
 
+        asset.UpdateStatus(request.StatusId);
+
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return Result.Success(assetUsage.Id);
     }

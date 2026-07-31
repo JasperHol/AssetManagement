@@ -21,5 +21,4 @@ public record CreateAssetCommand(string Name,
     int MsLicenceMappingId,
     int StatusId,
     int AssetTypeId,
-    int PersonId,
-    int LocationId) : ICommand<int>;
+    int PersonId) : ICommand<int>;

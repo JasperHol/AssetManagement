@@ -12,8 +12,5 @@ string OrderNumber,
 string CmdbLabel,
 DateOnly DepreciationDate,
 int MsLicenceMappingId,
-int StatusId,
-int AssetTypeId,
-int PersonId,
-int LocationId
+int AssetTypeId
 );

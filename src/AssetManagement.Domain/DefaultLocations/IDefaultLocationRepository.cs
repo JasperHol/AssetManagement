@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AssetManagement.Domain.Locations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,8 @@ public interface IDefaultLocationRepository
     void Add(DefaultLocation defaultlocation);
 
     DefaultLocation Update(DefaultLocation defaultlocation);
-    Task<bool> ExistsAsync(int statusId, int locationId, CancellationToken cancellationToken);
+    Task<bool> StatusIdExistsAsync(int statusId, CancellationToken cancellationToken);
+    Task<bool> LocationIdExistsAsync(int locationId, CancellationToken cancellationToken);
+
+    Task<DefaultLocation?> GetByStatusIdAsync(int statusId, CancellationToken cancellationToken = default);
 }

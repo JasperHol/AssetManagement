@@ -41,11 +41,17 @@ internal sealed class DefaultLocationConfiguration : IEntityTypeConfiguration<De
             .HasForeignKey(x => x.LocationId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasIndex(x => new
-        {
-            x.StatusId,
-            x.LocationId
-        })
-        .IsUnique();
+        //builder.HasIndex(x => new
+        //{
+        //    x.StatusId,
+        //    x.LocationId
+        //})
+        //.IsUnique();
+
+        builder.HasIndex(x => x.StatusId)
+            .IsUnique();
+
+        builder.HasIndex(x => x.LocationId)
+            .IsUnique();
     }
 }

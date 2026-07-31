@@ -1,11 +1,14 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
-
+using AssetManagement.Application.DefaultLocations.SearchDefaultLocationFromStatus;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.AssetUsages;
+using AssetManagement.Domain.DefaultLocations;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,11 +17,13 @@ namespace AssetManagement.Application.Assets.CreateAsset;
 internal sealed class CreateAssetCommandHandler(
     IAssetRepository assetRepository,
     IAssetUsageRepository assetUsageRepository,
+    IDefaultLocationRepository defaultLocationRepository,
     IUnitOfWork unitOfWork)
-        : ICommandHandler<CreateAssetCommand, int>
+    : ICommandHandler<CreateAssetCommand, int>
 {
     private readonly IAssetRepository _assetRepository = assetRepository;
     private readonly IAssetUsageRepository _assetUsageRepository = assetUsageRepository;
+    private readonly IDefaultLocationRepository _defaultLocationRepository = defaultLocationRepository;
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
 
     public async Task<Result<int>> Handle(CreateAssetCommand request, CancellationToken cancellationToken)
@@ -45,8 +50,22 @@ internal sealed class CreateAssetCommandHandler(
         _assetRepository.Add(asset);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        var personId = request.PersonId == 0 ? (int?)null : request.PersonId;
-        var locationId = request.LocationId == 0 ? (int?)null : request.LocationId;
+        //var personId = request.PersonId == 0 ? (int?)null : request.PersonId;
+        //var locationId = request.LocationId == 0 ? (int?)null : request.LocationId;
+        int? personId = null;
+
+
+        var defaultLocation = await _defaultLocationRepository.GetByStatusIdAsync(2,cancellationToken);
+
+        if (defaultLocation is null)
+        {
+            return Result.Failure<int>(
+                Error.NotFound(
+                    "DefaultLocation.NotFound",
+                    "No default location found for status 2."));
+        }
+
+        var locationId = defaultLocation.LocationId;
 
         var assetUsage = AssetUsage.Create(
             asset.Id,
@@ -56,8 +75,8 @@ internal sealed class CreateAssetCommandHandler(
             new StartDate(DateTime.UtcNow),
             new EndDate(null),
             new DataSource("API"),
-            new AgreementSignDate(DateTime.MinValue),
-            new AgreementDeclineDate(DateTime.MinValue),
+            new AgreementSignDate(null),
+            new AgreementDeclineDate(null),
             new AgreementDeclineReason(string.Empty),
             string.Empty
             ); 

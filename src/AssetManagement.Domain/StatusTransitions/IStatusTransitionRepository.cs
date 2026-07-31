@@ -15,4 +15,6 @@ public interface IStatusTransitionRepository
 
     StatusTransition Update(StatusTransition statusTransition);
 
+    Task<bool> IsTransitionAllowedAsync(int fromStatusId, int toStatusId, CancellationToken cancellationToken);
+
 }

@@ -48,9 +48,9 @@ public class AssetUsagesController(ISender sender) : ControllerBase
     {
         var command = new CreateAssetUsageCommand(
             request.PreviousAssetUsageId,
-            request.AssetId,
             request.PersonId,
-            request.LocationId
+            request.LocationId,
+            request.StatusId
            );
 
 

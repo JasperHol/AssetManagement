@@ -39,18 +39,43 @@ internal sealed class ChangeDefaultLocationCommandHandler
                     $"DefaultLocation with id {request.Id} was not found"));
         }
 
-        bool exists = await _defaultLocationRepository.ExistsAsync(
+        //bool exists = await _defaultLocationRepository.ExistsAsync(
+        //    request.Id,
+        //    request.LocationId,
+        //    cancellationToken);
+
+        //if (exists)
+        //{
+        //    return Result.Failure<int>(
+        //        Error.Validation(
+        //            "DefaultLocation.AlreadyExists",
+        //            $"A DefaultLocation with StatusId {request.Id} and LocationId {request.LocationId} already exists."));
+        //}
+
+        bool StatusIdexists = await _defaultLocationRepository.StatusIdExistsAsync(
             request.Id,
-            request.LocationId,
             cancellationToken);
 
-        if (exists)
+        if (StatusIdexists)
         {
             return Result.Failure<int>(
                 Error.Validation(
                     "DefaultLocation.AlreadyExists",
-                    $"A DefaultLocation with StatusId {request.Id} and LocationId {request.LocationId} already exists."));
+                    $"A DefaultLocation with StatusId {request.Id} already exists."));
         }
+
+        bool LocationIdexists = await _defaultLocationRepository.LocationIdExistsAsync(
+            request.LocationId,
+            cancellationToken);
+
+        if (LocationIdexists)
+        {
+            return Result.Failure<int>(
+                Error.Validation(
+                    "DefaultLocation.AlreadyExists",
+                    $"A DefaultLocation with LocationId {request.LocationId} already exists."));
+        }
+
 
         defaultLocation.ChangeDefaultLocation(request.LocationId);
 

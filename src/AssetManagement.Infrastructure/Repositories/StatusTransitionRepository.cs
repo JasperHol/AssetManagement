@@ -20,4 +20,23 @@ internal sealed class StatusTransitionRepository : Repository<StatusTransition>,
         DbContext.Set<StatusTransition>().Update(StatusTransition);
         return StatusTransition;
     }
+
+    public interface IStatusTransitionRepository
+    {
+        Task<bool> IsTransitionAllowedAsync(
+            int fromStatusId,
+            int toStatusId,
+            CancellationToken cancellationToken);
+    }
+    public async Task<bool> IsTransitionAllowedAsync(
+    int fromStatusId,
+    int toStatusId,
+    CancellationToken cancellationToken)
+    {
+        return await DbContext.Set<StatusTransition>()
+            .AnyAsync(
+            x => x.StatusFromId == fromStatusId &&
+            x.StatusToId == toStatusId,
+            cancellationToken);
+    }
 }

@@ -78,10 +78,10 @@ public class AssetsController(ISender sender) : ControllerBase
             request.CmdbLabel,
             request.DepreciationDate,
             request.MsLicenceMappingId,
-            request.StatusId,
+            2, //status wordt altijd stock
             request.AssetTypeId,
-            request.PersonId,
-            request.LocationId);
+            0 //person nooit invullen bij create, dit komt pas bij toewijzen
+            );
 
 
           

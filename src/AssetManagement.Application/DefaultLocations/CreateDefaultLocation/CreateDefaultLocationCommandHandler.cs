@@ -28,17 +28,28 @@ internal sealed class CreateDefaultLocationCommandHandler
     public async Task<Result<int>> Handle(CreateDefaultLocationCommand request, CancellationToken cancellationToken)
     {
 
-        bool exists = await _defaultLocationRepository.ExistsAsync(
+        bool StatusIdexists = await _defaultLocationRepository.StatusIdExistsAsync(
             request.StatusId,
-            request.LocationId,
             cancellationToken);
 
-        if (exists)
+        if (StatusIdexists)
         {
             return Result.Failure<int>(
                 Error.Validation(
                     "DefaultLocation.AlreadyExists",
-                    $"A DefaultLocation with StatusId {request.StatusId} and LocationId {request.LocationId} already exists."));
+                    $"A DefaultLocation with StatusId {request.StatusId} already exists."));
+        }
+        
+        bool LocationIdexists = await _defaultLocationRepository.LocationIdExistsAsync(
+            request.LocationId,
+            cancellationToken);
+
+        if (LocationIdexists)
+        {
+            return Result.Failure<int>(
+                Error.Validation(
+                    "DefaultLocation.AlreadyExists",
+                    $"A DefaultLocation with LocationId {request.LocationId} already exists."));
         }
         var defaultLocation = DefaultLocation.Create(
             request.StatusId,

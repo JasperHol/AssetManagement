@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 namespace AssetManagement.Application.AssetUsages.CreateAssetUsage;
 public record CreateAssetUsageCommand(
     int PreviousAssetUsageId,
-    int AssetId,
     int PersonId,
-    int LocationId
+    int LocationId,
+    int StatusId
 
     )    : ICommand<int>;
