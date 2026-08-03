@@ -20,4 +20,16 @@ internal sealed class AssetUsageRepository : Repository<AssetUsage>, IAssetUsage
         DbContext.Set<AssetUsage>().Update(assetUsage);
         return assetUsage;
     }
+
+    public async Task<AssetUsage?> GetOpenByAssetIdAsync(
+    int assetId,
+    CancellationToken cancellationToken)
+    {
+        return await DbContext.Set<AssetUsage>()
+            .SingleOrDefaultAsync(
+                x => x.AssetId == assetId &&
+                     x.EndDate == null,
+                cancellationToken);
+    }
+
 }

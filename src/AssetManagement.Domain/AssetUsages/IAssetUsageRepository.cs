@@ -14,4 +14,6 @@ public interface IAssetUsageRepository
 
     AssetUsage Update(AssetUsage assetUsage);
 
+    Task<AssetUsage?> GetOpenByAssetIdAsync(int assetId, CancellationToken cancellationToken);
+
 }

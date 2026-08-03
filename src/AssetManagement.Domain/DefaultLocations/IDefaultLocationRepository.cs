@@ -22,4 +22,8 @@ public interface IDefaultLocationRepository
     Task<bool> LocationIdExistsAsync(int locationId, CancellationToken cancellationToken);
 
     Task<DefaultLocation?> GetByStatusIdAsync(int statusId, CancellationToken cancellationToken = default);
+
+    
+
+
 }

@@ -1,8 +1,12 @@
 ﻿using AssetManagement.Api.Controllers.AssetUsages;
+using AssetManagement.Application.AssetUsage.CreateAssetUsageStatus;
 using AssetManagement.Application.AssetUsages.CreateAssetUsage;
+using AssetManagement.Application.AssetUsages.CreateAssetUsageLocation;
+using AssetManagement.Application.AssetUsages.CreateAssetUsagePerson;
 using AssetManagement.Application.AssetUsages.DeclineAssetUsage;
 using AssetManagement.Application.AssetUsages.EndAssetUsage;
 using AssetManagement.Application.AssetUsages.SearchAssetUsage;
+using AssetManagement.Application.AssetUsages.SearchAssetUsageOpenForAssetId;
 using AssetManagement.Application.AssetUsages.SignAssetUsage;
 using AssetManagement.Domain.AssetUsages;
 using Azure.Core;
@@ -33,7 +37,23 @@ public class AssetUsagesController(ISender sender) : ControllerBase
         return Ok(result.Value);
     }
 
-    
+    /// <summary>
+    /// Get Open AssetUsage for AssetId.
+    /// </summary>
+    /// <remarks>
+    /// Lijst van alle AssetUsages ophalen.
+    /// </remarks>
+    [HttpGet("open_AssetUsages_for_assetId/{id:int}")]
+    public async Task<IActionResult> SearchAssetUsagesOpenForAssetId(int id, CancellationToken cancellationToken)
+    {
+        var query = new SearchAssetUsageOpenForAssetIdQuery(id);
+
+        var result = await sender.Send(query, cancellationToken);
+
+        return Ok(result.Value);
+    }
+
+
     /// <summary>
     /// Create New AssetUsage.
     /// </summary>
@@ -64,6 +84,95 @@ public class AssetUsagesController(ISender sender) : ControllerBase
 
         return CreatedAtAction(nameof(CreateAssetUsage), new { id = result.Value }, result.Value);
     }
+
+
+    /// <summary>
+    /// Create New AssetUsage for Location.
+    /// </summary>
+    /// <remarks>
+    /// Nieuwe AssetUsage toevoegen met locatie.
+    /// </remarks>
+    [HttpPost("AssetUsage_create_location")]
+    public async Task<IActionResult> CreateAssetUsageLocation(
+
+        CreateAssetUsageLocationRequest request,
+        CancellationToken cancellationToken)
+    {
+        var command = new CreateAssetUsageLocationCommand(
+            request.AssetId,
+            request.LocationId
+           );
+
+
+
+        var result = await sender.Send(command, cancellationToken);
+
+        if (result.IsFailure)
+        {
+            return BadRequest(result.Error);
+        }
+
+        return CreatedAtAction(nameof(CreateAssetUsageLocation), new { id = result.Value }, result.Value);
+    }
+    /// <summary>
+    /// Create New AssetUsage for Person.
+    /// </summary>
+    /// <remarks>
+    /// Nieuwe AssetUsage toevoegen met person.
+    /// </remarks>
+    [HttpPost("AssetUsage_create_person")]
+    public async Task<IActionResult> CreateAssetUsagePerson(
+
+        CreateAssetUsagePersonRequest request,
+        CancellationToken cancellationToken)
+    {
+        var command = new CreateAssetUsagePersonCommand(
+            request.AssetId,
+            request.PersonId
+           );
+
+
+
+        var result = await sender.Send(command, cancellationToken);
+
+        if (result.IsFailure)
+        {
+            return BadRequest(result.Error);
+        }
+
+        return CreatedAtAction(nameof(CreateAssetUsagePerson), new { id = result.Value }, result.Value);
+    }
+    /// <summary>
+    /// Create New AssetUsage for Status.
+    /// </summary>
+    /// <remarks>
+    /// Nieuwe AssetUsage toevoegen met status.
+    /// </remarks>
+    [HttpPost("AssetUsage_create_status")]
+    public async Task<IActionResult> CreateAssetUsageStatus(
+
+        CreateAssetUsageStatusRequest request,
+        CancellationToken cancellationToken)
+    {
+        var command = new CreateAssetUsageStatusCommand(
+            request.AssetId,
+            request.StatusId
+           );
+
+
+
+        var result = await sender.Send(command, cancellationToken);
+
+        if (result.IsFailure)
+        {
+            return BadRequest(result.Error);
+        }
+
+        return CreatedAtAction(nameof(CreateAssetUsageStatus), new { id = result.Value }, result.Value);
+    }
+
+
+
 
 
     /// <summary>

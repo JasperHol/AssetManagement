@@ -1,5 +1,4 @@
 ﻿using AssetManagement.Application.Abstractions.Messaging;
-using AssetManagement.Application.DefaultLocations.SearchDefaultLocationFromStatus;
 using AssetManagement.Domain.Abstractions;
 using AssetManagement.Domain.Assets;
 using AssetManagement.Domain.AssetUsages;
@@ -67,7 +66,7 @@ internal sealed class CreateAssetCommandHandler(
 
         var locationId = defaultLocation.LocationId;
 
-        var assetUsage = AssetUsage.Create(
+        var assetUsage = AssetManagement.Domain.AssetUsages.AssetUsage.Create(
             asset.Id,
             personId,
             locationId,

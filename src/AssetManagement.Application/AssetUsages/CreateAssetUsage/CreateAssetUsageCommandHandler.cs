@@ -83,7 +83,7 @@ internal sealed class CreateAssetUsageCommandHandler
         var personId = request.PersonId == 0 ? (int?)null : request.PersonId;
         var locationId = request.LocationId == 0 ? (int?)null : request.LocationId;
 
-        var assetUsage = AssetUsage.Create(
+        var assetUsage = AssetManagement.Domain.AssetUsages.AssetUsage.Create(
             previousAssetUsage.AssetId,
             personId,
             locationId,
